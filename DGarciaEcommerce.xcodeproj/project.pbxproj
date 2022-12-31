@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF0E843F295CCFB300E3415B /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E843E295CCFB300E3415B /* Producto.swift */; };
+		EF0E8441295CD0E800E3415B /* Proveedor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8440295CD0E800E3415B /* Proveedor.swift */; };
+		EF0E8443295CD14100E3415B /* Departamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8442295CD14100E3415B /* Departamento.swift */; };
+		EF0E8445295CD1B100E3415B /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8444295CD1B100E3415B /* Area.swift */; };
+		EF0E8447295CD20700E3415B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8446295CD20700E3415B /* Result.swift */; };
+		EF0E8449295CD38E00E3415B /* ProductoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8448295CD38E00E3415B /* ProductoViewModel.swift */; };
+		EF2D144E295E69C300561FF6 /* ProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D144C295E69C300561FF6 /* ProductoTableViewCell.swift */; };
+		EF2D144F295E69C300561FF6 /* ProductoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF2D144D295E69C300561FF6 /* ProductoTableViewCell.xib */; };
+		EF62212A295BB49600EA5D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF622129295BB49600EA5D5E /* AppDelegate.swift */; };
+		EF62212C295BB49600EA5D5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62212B295BB49600EA5D5E /* SceneDelegate.swift */; };
+		EF62212E295BB49600EA5D5E /* ProductoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62212D295BB49600EA5D5E /* ProductoController.swift */; };
+		EF622131295BB49600EA5D5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF62212F295BB49600EA5D5E /* Main.storyboard */; };
+		EF622134295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF622132295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld */; };
+		EF622136295BB49800EA5D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF622135295BB49800EA5D5E /* Assets.xcassets */; };
+		EF622139295BB49800EA5D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF622137295BB49800EA5D5E /* LaunchScreen.storyboard */; };
+		EF622145295BB72800EA5D5E /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF622144295BB72800EA5D5E /* DB.swift */; };
+		EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF0E843E295CCFB300E3415B /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
+		EF0E8440295CD0E800E3415B /* Proveedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proveedor.swift; sourceTree = "<group>"; };
+		EF0E8442295CD14100E3415B /* Departamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departamento.swift; sourceTree = "<group>"; };
+		EF0E8444295CD1B100E3415B /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		EF0E8446295CD20700E3415B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EF0E8448295CD38E00E3415B /* ProductoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoViewModel.swift; sourceTree = "<group>"; };
+		EF2D144C295E69C300561FF6 /* ProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductoTableViewCell.swift; path = ../../ProductoTableViewCell.swift; sourceTree = "<group>"; };
+		EF2D144D295E69C300561FF6 /* ProductoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProductoTableViewCell.xib; path = ../ProductoTableViewCell.xib; sourceTree = "<group>"; };
+		EF622126295BB49600EA5D5E /* DGarciaEcommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGarciaEcommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF622129295BB49600EA5D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF62212B295BB49600EA5D5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EF62212D295BB49600EA5D5E /* ProductoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoController.swift; sourceTree = "<group>"; };
+		EF622130295BB49600EA5D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF622133295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGarciaEcommerce.xcdatamodel; sourceTree = "<group>"; };
+		EF622135295BB49800EA5D5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF622138295BB49800EA5D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF62213A295BB49800EA5D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF622144295BB72800EA5D5E /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF622123295BB49600EA5D5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF62211D295BB49600EA5D5E = {
+			isa = PBXGroup;
+			children = (
+				EF622128295BB49600EA5D5E /* DGarciaEcommerce */,
+				EF622127295BB49600EA5D5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF622127295BB49600EA5D5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF622126295BB49600EA5D5E /* DGarciaEcommerce.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF622128295BB49600EA5D5E /* DGarciaEcommerce */ = {
+			isa = PBXGroup;
+			children = (
+				EF622143295BB4E100EA5D5E /* Controller */,
+				EF622142295BB4D400EA5D5E /* View */,
+				EF622141295BB4C100EA5D5E /* ViewModel */,
+				EF622140295BB4B500EA5D5E /* Model */,
+				EF622129295BB49600EA5D5E /* AppDelegate.swift */,
+				EF62212B295BB49600EA5D5E /* SceneDelegate.swift */,
+				EF622135295BB49800EA5D5E /* Assets.xcassets */,
+				EF62213A295BB49800EA5D5E /* Info.plist */,
+				EF622132295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld */,
+			);
+			path = DGarciaEcommerce;
+			sourceTree = "<group>";
+		};
+		EF622140295BB4B500EA5D5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF0E843E295CCFB300E3415B /* Producto.swift */,
+				EF0E8440295CD0E800E3415B /* Proveedor.swift */,
+				EF0E8442295CD14100E3415B /* Departamento.swift */,
+				EF0E8444295CD1B100E3415B /* Area.swift */,
+				EF0E8446295CD20700E3415B /* Result.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF622141295BB4C100EA5D5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF622144295BB72800EA5D5E /* DB.swift */,
+				EF0E8448295CD38E00E3415B /* ProductoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF622142295BB4D400EA5D5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF62212F295BB49600EA5D5E /* Main.storyboard */,
+				EF622137295BB49800EA5D5E /* LaunchScreen.storyboard */,
+				EF2D144D295E69C300561FF6 /* ProductoTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF622143295BB4E100EA5D5E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFB5EFF5295E68ED009B1802 /* Producto */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EFB5EFF5295E68ED009B1802 /* Producto */ = {
+			isa = PBXGroup;
+			children = (
+				EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */,
+				EF62212D295BB49600EA5D5E /* ProductoController.swift */,
+				EF2D144C295E69C300561FF6 /* ProductoTableViewCell.swift */,
+			);
+			path = Producto;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF622125295BB49600EA5D5E /* DGarciaEcommerce */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF62213D295BB49800EA5D5E /* Build configuration list for PBXNativeTarget "DGarciaEcommerce" */;
+			buildPhases = (
+				EF622122295BB49600EA5D5E /* Sources */,
+				EF622123295BB49600EA5D5E /* Frameworks */,
+				EF622124295BB49600EA5D5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DGarciaEcommerce;
+			productName = DGarciaEcommerce;
+			productReference = EF622126295BB49600EA5D5E /* DGarciaEcommerce.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF62211E295BB49600EA5D5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					EF622125295BB49600EA5D5E = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = EF622121295BB49600EA5D5E /* Build configuration list for PBXProject "DGarciaEcommerce" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF62211D295BB49600EA5D5E;
+			productRefGroup = EF622127295BB49600EA5D5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF622125295BB49600EA5D5E /* DGarciaEcommerce */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF622124295BB49600EA5D5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF622139295BB49800EA5D5E /* LaunchScreen.storyboard in Resources */,
+				EF2D144F295E69C300561FF6 /* ProductoTableViewCell.xib in Resources */,
+				EF622136295BB49800EA5D5E /* Assets.xcassets in Resources */,
+				EF622131295BB49600EA5D5E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF622122295BB49600EA5D5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF622134295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld in Sources */,
+				EF0E8443295CD14100E3415B /* Departamento.swift in Sources */,
+				EF62212E295BB49600EA5D5E /* ProductoController.swift in Sources */,
+				EF62212A295BB49600EA5D5E /* AppDelegate.swift in Sources */,
+				EF0E8441295CD0E800E3415B /* Proveedor.swift in Sources */,
+				EF0E843F295CCFB300E3415B /* Producto.swift in Sources */,
+				EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */,
+				EF0E8447295CD20700E3415B /* Result.swift in Sources */,
+				EF622145295BB72800EA5D5E /* DB.swift in Sources */,
+				EF0E8445295CD1B100E3415B /* Area.swift in Sources */,
+				EF2D144E295E69C300561FF6 /* ProductoTableViewCell.swift in Sources */,
+				EF62212C295BB49600EA5D5E /* SceneDelegate.swift in Sources */,
+				EF0E8449295CD38E00E3415B /* ProductoViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF62212F295BB49600EA5D5E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF622130295BB49600EA5D5E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF622137295BB49800EA5D5E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF622138295BB49800EA5D5E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF62213B295BB49800EA5D5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF62213C295BB49800EA5D5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF62213E295BB49800EA5D5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R6B33YVR42;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DGarciaEcommerce/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digis.DGarciaEcommerce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF62213F295BB49800EA5D5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R6B33YVR42;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DGarciaEcommerce/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digis.DGarciaEcommerce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF622121295BB49600EA5D5E /* Build configuration list for PBXProject "DGarciaEcommerce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF62213B295BB49800EA5D5E /* Debug */,
+				EF62213C295BB49800EA5D5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF62213D295BB49800EA5D5E /* Build configuration list for PBXNativeTarget "DGarciaEcommerce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF62213E295BB49800EA5D5E /* Debug */,
+				EF62213F295BB49800EA5D5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF622132295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF622133295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodel */,
+			);
+			currentVersion = EF622133295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodel */;
+			path = DGarciaEcommerce.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF62211E295BB49600EA5D5E /* Project object */;
+}

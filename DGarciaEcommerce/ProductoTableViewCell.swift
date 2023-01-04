@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class ProductoTableViewCell: UITableViewCell {
+class ProductoTableViewCell: SwipeTableViewCell {
 
     @IBOutlet weak var NombreProducto: UILabel!
     @IBOutlet weak var PrecioProducto: UILabel!
@@ -27,3 +28,4 @@ class ProductoTableViewCell: UITableViewCell {
     }
     
 }
+

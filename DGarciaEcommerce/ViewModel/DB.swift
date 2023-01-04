@@ -17,8 +17,8 @@ class DB {
     }
     
     func OpenConection() -> OpaquePointer?{
-        let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(self.path)
-//        let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathExtension(self.path)
+//        let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(self.path)
+        let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathExtension(self.path)
         var db : OpaquePointer? = nil
         
         if sqlite3_open(filePath.path, &db) == SQLITE_OK {
@@ -32,3 +32,4 @@ class DB {
     }
     
 }
+

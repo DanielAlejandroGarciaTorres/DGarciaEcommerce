@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A497D62073B472DD5EC80A20 /* Pods_DGarciaEcommerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D229A692EE1624E79F8A18FA /* Pods_DGarciaEcommerce.framework */; };
 		EF0E843F295CCFB300E3415B /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E843E295CCFB300E3415B /* Producto.swift */; };
 		EF0E8441295CD0E800E3415B /* Proveedor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8440295CD0E800E3415B /* Proveedor.swift */; };
 		EF0E8443295CD14100E3415B /* Departamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8442295CD14100E3415B /* Departamento.swift */; };
@@ -27,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10694476533BB5934DF50B15 /* Pods-DGarciaEcommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGarciaEcommerce.debug.xcconfig"; path = "Target Support Files/Pods-DGarciaEcommerce/Pods-DGarciaEcommerce.debug.xcconfig"; sourceTree = "<group>"; };
+		D229A692EE1624E79F8A18FA /* Pods_DGarciaEcommerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGarciaEcommerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5619FA42FA59CACAFA4D47 /* Pods-DGarciaEcommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGarciaEcommerce.release.xcconfig"; path = "Target Support Files/Pods-DGarciaEcommerce/Pods-DGarciaEcommerce.release.xcconfig"; sourceTree = "<group>"; };
 		EF0E843E295CCFB300E3415B /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
 		EF0E8440295CD0E800E3415B /* Proveedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proveedor.swift; sourceTree = "<group>"; };
 		EF0E8442295CD14100E3415B /* Departamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departamento.swift; sourceTree = "<group>"; };
@@ -53,17 +57,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A497D62073B472DD5EC80A20 /* Pods_DGarciaEcommerce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A64C1C3DB6179196FD59578 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10694476533BB5934DF50B15 /* Pods-DGarciaEcommerce.debug.xcconfig */,
+				EB5619FA42FA59CACAFA4D47 /* Pods-DGarciaEcommerce.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9033F0EF1231E7A35D79AA52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D229A692EE1624E79F8A18FA /* Pods_DGarciaEcommerce.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF62211D295BB49600EA5D5E = {
 			isa = PBXGroup;
 			children = (
 				EF622128295BB49600EA5D5E /* DGarciaEcommerce */,
 				EF622127295BB49600EA5D5E /* Products */,
+				4A64C1C3DB6179196FD59578 /* Pods */,
+				9033F0EF1231E7A35D79AA52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF62213D295BB49800EA5D5E /* Build configuration list for PBXNativeTarget "DGarciaEcommerce" */;
 			buildPhases = (
+				EF1BC798E4C41AC49B999ED7 /* [CP] Check Pods Manifest.lock */,
 				EF622122295BB49600EA5D5E /* Sources */,
 				EF622123295BB49600EA5D5E /* Frameworks */,
 				EF622124295BB49600EA5D5E /* Resources */,
+				B300E58D6ACC364C1449D8EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,6 +233,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B300E58D6ACC364C1449D8EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DGarciaEcommerce/Pods-DGarciaEcommerce-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DGarciaEcommerce/Pods-DGarciaEcommerce-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DGarciaEcommerce/Pods-DGarciaEcommerce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF1BC798E4C41AC49B999ED7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DGarciaEcommerce-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF622122295BB49600EA5D5E /* Sources */ = {
@@ -366,6 +435,7 @@
 		};
 		EF62213E295BB49800EA5D5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10694476533BB5934DF50B15 /* Pods-DGarciaEcommerce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -399,6 +469,7 @@
 		};
 		EF62213F295BB49800EA5D5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5619FA42FA59CACAFA4D47 /* Pods-DGarciaEcommerce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

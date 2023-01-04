@@ -46,10 +46,12 @@ class ProductoViewModel{
             result.ErrorMessage = error.localizedDescription
             result.Ex = error
         }
+        sqlite3_finalize(statement)
+        sqlite3_close(context.db)
         return result
     }
  
-    func Update (producto : Producto, idProducto : Int32) -> Result {
+    func Update (producto : Producto, idProducto : Int) -> Result {
         var result = Result()
         let context = DB.init()
         let query = "UPDATE Producto SET Nombre = ?, PrecioUnitario = ?, Stock = ?, IdProveedor = ?, IdDepartamento = ?, Descripcion = ?, Imagen = ? WHERE IdProducto = ?"
@@ -64,7 +66,7 @@ class ProductoViewModel{
                 sqlite3_bind_int(statement, 5, Int32(producto.Departamento.IdDepartamento))
                 sqlite3_bind_text(statement, 6, (producto.Descripcion! as NSString).utf8String, -1, nil)
                 sqlite3_bind_text(statement, 7, nil, -1, nil)
-                sqlite3_bind_int(statement, 8, idProducto)
+                sqlite3_bind_int(statement, 8, Int32(idProducto))
                 
                 if sqlite3_step(statement) == SQLITE_DONE {
                     result.Correct = true
@@ -84,10 +86,12 @@ class ProductoViewModel{
             result.ErrorMessage = error.localizedDescription
             result.Ex = error
         }
+        sqlite3_finalize(statement)
+        sqlite3_close(context.db)
         return result
     }
     
-    func Delete (idProducto : Int32) -> Result {
+    func Delete (idProducto : Int) -> Result {
         var result = Result()
         let context = DB.init()
         let query = "DELETE FROM Producto WHERE IdProducto = \(idProducto)"
@@ -114,6 +118,8 @@ class ProductoViewModel{
             result.ErrorMessage = error.localizedDescription
             result.Ex = error
         }
+        sqlite3_finalize(statement)
+        sqlite3_close(context.db)
         return result
     }
     
@@ -182,6 +188,8 @@ class ProductoViewModel{
             result.ErrorMessage = error.localizedDescription
             result.Ex = error
         }
+        sqlite3_finalize(statement)
+        sqlite3_close(context.db)
         return result
     }
     
@@ -255,6 +263,9 @@ class ProductoViewModel{
             result.ErrorMessage = error.localizedDescription
             result.Ex = error
         }
+        
+        sqlite3_finalize(statement)
+        sqlite3_close(context.db)
         return result
     }
 }

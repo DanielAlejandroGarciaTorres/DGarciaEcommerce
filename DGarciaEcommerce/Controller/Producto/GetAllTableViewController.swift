@@ -59,7 +59,12 @@ class GetAllTableViewController: UITableViewController{
         cell.ProveedorProducto.text = productos[indexPath.row].Proveedor.Nombre
         cell.PrecioProducto.text = String(productos[indexPath.row].PrecioUnitario)
         cell.StockProducto.text = String(productos[indexPath.row].Stock)
-        cell.ImagenProducto.image = UIImage(named: "Image-not-found")
+        if productos[indexPath.row].Imagen == "" || productos[indexPath.row].Imagen == nil{
+            cell.ImagenProducto.image = UIImage(named: "Image-not-found")
+        } else {
+            let imageData = Data(base64Encoded: productos[indexPath.row].Imagen!, options: .ignoreUnknownCharacters)
+            cell.ImagenProducto.image = UIImage(data: imageData!)
+        }
         
         return cell
     }
@@ -119,13 +124,11 @@ extension GetAllTableViewController : SwipeTableViewCellDelegate {
         self.idProducto = self.productos[indexPath.row].IdProducto
         
         let updateAction = SwipeAction(style: .destructive, title: "Update") {action, indexPath in
-            print("Hola soy el update en: \(self.productos[indexPath.row].Nombre)")
             
             self.performSegue(withIdentifier: "UpdateSegue", sender: self)
         }
         
         let deleteAction =  SwipeAction(style: .destructive, title: "Delete") {action, indexPath in
-            print("Hola soy el delete en: \(indexPath.row)")
             
             let result = self.productoViewModel.Delete(idProducto: self.idProducto)
             

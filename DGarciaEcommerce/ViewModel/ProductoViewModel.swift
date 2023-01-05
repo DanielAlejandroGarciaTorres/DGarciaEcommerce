@@ -26,28 +26,21 @@ class ProductoViewModel{
                 sqlite3_bind_int(statement, 4, Int32(producto.Proveedor.IdProveedor))
                 sqlite3_bind_int(statement, 5, Int32(producto.Departamento.IdDepartamento))
                 sqlite3_bind_text(statement, 6, (producto.Descripcion! as NSString).utf8String, -1, nil)
-                sqlite3_bind_text(statement, 7, nil, -1, nil)
+                sqlite3_bind_text(statement, 7, (producto.Imagen! as NSString).utf8String, -1, nil)
                 
                 if sqlite3_step(statement) == SQLITE_DONE {
                     result.Correct = true
                 } else {
                     print(sqlite3_step(statement))
                     result.Correct = false
-                    result.ErrorMessage = "No logre insertar los recursos en la Base de Datos."
+                    result.ErrorMessage = "Recurso no insertado."
                 }
-            } else {
-                print(sqlite3_step(statement))
-                print(statement)
-                print(context.db!)
             }
-            
         } catch let error{
             result.Correct = false
             result.ErrorMessage = error.localizedDescription
             result.Ex = error
         }
-        sqlite3_finalize(statement)
-        sqlite3_close(context.db)
         return result
     }
  
@@ -65,7 +58,7 @@ class ProductoViewModel{
                 sqlite3_bind_int(statement, 4, Int32(producto.Proveedor.IdProveedor))
                 sqlite3_bind_int(statement, 5, Int32(producto.Departamento.IdDepartamento))
                 sqlite3_bind_text(statement, 6, (producto.Descripcion! as NSString).utf8String, -1, nil)
-                sqlite3_bind_text(statement, 7, nil, -1, nil)
+                sqlite3_bind_text(statement, 7, (producto.Imagen! as NSString).utf8String, -1, nil)
                 sqlite3_bind_int(statement, 8, Int32(idProducto))
                 
                 if sqlite3_step(statement) == SQLITE_DONE {
@@ -139,7 +132,8 @@ class ProductoViewModel{
                 Departamento.Nombre AS NombreDepartamento,
                 Departamento.IdArea,
                 Area.Nombre AS NombreArea,
-                Descripcion
+                Descripcion,
+                Imagen
                 FROM Producto
                 INNER JOIN Proveedor ON Producto.IdProveedor = Proveedor.IdProveedor
                 INNER JOIN Departamento ON Producto.IdDepartamento = Departamento.IdDepartamento
@@ -154,7 +148,12 @@ class ProductoViewModel{
                 while(sqlite3_step(statement) == SQLITE_ROW){
                     var description : String? = nil
                     if sqlite3_column_text(statement, 11) != nil {
-                        description = String(cString: sqlite3_column_text(statement, 11))                    }
+                        description = String(cString: sqlite3_column_text(statement, 11))
+                    }
+                    var imagen : String? = nil
+                    if sqlite3_column_text(statement, 12) != nil{
+                        imagen = String(cString: sqlite3_column_text(statement, 12))
+                    }
                     
                     let producto = Producto(
                                         IdProducto: Int(sqlite3_column_int(statement, 0)),
@@ -175,7 +174,7 @@ class ProductoViewModel{
                                             )
                                         ),
                                         Descripcion: description ,
-                                        Imagen: nil
+                                        Imagen: imagen
                                     )
                     result.Objects?.append(producto)
                 }
@@ -209,7 +208,8 @@ class ProductoViewModel{
                 Departamento.Nombre AS NombreDepartamento,
                 Departamento.IdArea,
                 Area.Nombre AS NombreArea,
-                Descripcion
+                Descripcion,
+                Imagen
                 FROM Producto
                 INNER JOIN Proveedor ON Producto.IdProveedor = Proveedor.IdProveedor
                 INNER JOIN Departamento ON Producto.IdDepartamento = Departamento.IdDepartamento
@@ -221,11 +221,16 @@ class ProductoViewModel{
         do {
             if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK {
                 
-                result.Objects = []
                 if(sqlite3_step(statement) == SQLITE_ROW){
                     var description : String? = nil
                     if sqlite3_column_text(statement, 11) != nil {
-                        description = String(cString: sqlite3_column_text(statement, 11))                    }
+                        description = String(cString: sqlite3_column_text(statement, 11))
+                    }
+                    
+                    var imagen : String? = nil
+                    if sqlite3_column_text(statement, 12) != nil {
+                        imagen = String(cString: sqlite3_column_text(statement, 12))
+                    }
                     
                     let producto = Producto(
                                         IdProducto: Int(sqlite3_column_int(statement, 0)),
@@ -246,13 +251,13 @@ class ProductoViewModel{
                                             )
                                         ),
                                         Descripcion: description ,
-                                        Imagen: nil
+                                        Imagen: imagen
                                     )
                     result.Object = producto
                     result.Correct = true
                 } else {
                     result.Correct = false
-                    result.ErrorMessage = "Usuario no encontrado"
+                    result.ErrorMessage = "Producto no encontrado"
                 }
                 
                 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductoController: UIViewController {
+class ProductoController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var NombreProducto: UITextField!
     @IBOutlet weak var PrecioUnitario: UITextField!
@@ -15,16 +15,20 @@ class ProductoController: UIViewController {
     @IBOutlet weak var IdProveedor: UITextField!
     @IBOutlet weak var IdDepartamento: UITextField!
     @IBOutlet weak var Descripcion: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var ButtonOultet: UIButton!
     
     var idProducto : Int? = nil
-    
+    let imagePicker = UIImagePickerController()
     let productoViewmodel = ProductoViewModel()
     var productoModel : Producto? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         validar()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.isEditing = false
         // Do any additional setup after loading the view.
         
         //productoViewmodel.GetAll()
@@ -33,10 +37,10 @@ class ProductoController: UIViewController {
     }
     
     func validar(){
+        print(idProducto)
         if idProducto != nil {
             
-            let productoModel = (productoViewmodel.GetById(idProducto: idProducto!).Object as! Producto)
-//            productoModel = (result.Object as! Producto)
+            let productoModel = productoViewmodel.GetById(idProducto: idProducto!).Object as! Producto
             
             self.NombreProducto.text = productoModel.Nombre
             self.PrecioUnitario.text = String(describing: productoModel.PrecioUnitario)
@@ -44,6 +48,13 @@ class ProductoController: UIViewController {
             self.IdProveedor.text = String(describing: productoModel.Proveedor.IdProveedor)
             self.IdDepartamento.text = String(describing: productoModel.Departamento.IdDepartamento)
             self.Descripcion.text = productoModel.Descripcion
+//            self.imageView.image = UIImage(data: NSData(base64Encoded: productoModel.Imagen, options: .ignoreUnknownCharacters)) ?? UIImage(named: "photo")
+            if productoModel.Imagen == "" || productoModel.Imagen == nil {
+                self.imageView.image = UIImage(systemName: "photo")
+            } else {
+                let dataDecoded: Data = Data(base64Encoded: productoModel.Imagen! , options: .ignoreUnknownCharacters)!
+                self.imageView.image = UIImage(data: dataDecoded)
+            }
             
             ButtonOultet.setTitle("Actualizar", for: .normal)
             ButtonOultet.titleLabel?.text = "Actualizar"
@@ -87,6 +98,15 @@ class ProductoController: UIViewController {
             return
         }
         
+        let imageString : String
+        
+        if imageView.restorationIdentifier == "photo" {
+            imageString = ""
+        } else {
+            let imageData: NSData = imageView.image!.pngData()! as NSData
+            imageString = imageData.base64EncodedString(options: .lineLength64Characters)
+        }
+        
         productoModel = Producto(
             IdProducto: idProducto!,
             Nombre: NombreProducto.text!,
@@ -95,12 +115,9 @@ class ProductoController: UIViewController {
             Proveedor: Proveedor.init(IdProveedor: Int(self.IdProveedor.text!)!, Nombre: "", Telefono: ""),
             Departamento: Departamento.init(IdDepartamento: Int(self.IdDepartamento.text!)!,Nombre: "", Area: Area.init(IdArea: 0, Nombre: "")),
             Descripcion: Descripcion.text!,
-            Imagen: nil)
+            Imagen: imageString)
         
         var result = Result()
-        
-        print(sender.titleLabel!.text!)
-        print(sender.currentTitle!)
         
         if sender.currentTitle! == "Agregar"{
             result = productoViewmodel.Add(producto: productoModel!)
@@ -114,24 +131,15 @@ class ProductoController: UIViewController {
                     self.IdProveedor.text = ""
                     self.IdDepartamento.text = ""
                     self.Descripcion.text = ""
+                    self.imageView.image = UIImage(systemName: "photo")
                 })
                 alert.addAction(ok)
                 self.present(alert, animated: true)
             } else {
-                let alert = UIAlertController(title: "Error", message: "¡Producto no insertado!", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
-                    self.NombreProducto.text = ""
-                    self.PrecioUnitario.text = ""
-                    self.Stock.text = ""
-                    self.IdProveedor.text = ""
-                    self.IdDepartamento.text = ""
-                    self.Descripcion.text = ""
-                })
-                alert.addAction(ok)
-                self.present(alert, animated: true)
-            }
+                let alert = UIAlertController(title: "Error", message: "¡Producto no insertado! Intentalo más tarde.", preferredStyle: .alert)
+                            }
         } else if sender.currentTitle! == "Actualizar" {
-            print("voy a actualizar")
+            
             result = productoViewmodel.Update(producto: productoModel!, idProducto: idProducto!)
             
             if result.Correct {
@@ -143,11 +151,12 @@ class ProductoController: UIViewController {
                     self.IdProveedor.text = ""
                     self.IdDepartamento.text = ""
                     self.Descripcion.text = ""
+                    self.imageView.image = UIImage(systemName: "photo")
                 })
                 alert.addAction(ok)
                 self.present(alert, animated: true)
             } else {
-                let alert = UIAlertController(title: "Error", message: "¡Producto no modificado!", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Error", message: "¡Producto no actualizado! Intenalo más tarde.", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default)
                 alert.addAction(ok)
                 self.present(alert, animated: true)
@@ -160,8 +169,18 @@ class ProductoController: UIViewController {
         }
     }
     
-   
-//
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            imageView.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func ImageButton() {
+        self.present(imagePicker, animated: true)
+    }
+    //
 //
 //    @IBAction func Update(_ sender: UIButton) {
 //        guard NombreProducto.text != "" else {

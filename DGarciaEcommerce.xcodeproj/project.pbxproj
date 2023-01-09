@@ -29,7 +29,14 @@
 		EF622136295BB49800EA5D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF622135295BB49800EA5D5E /* Assets.xcassets */; };
 		EF622139295BB49800EA5D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF622137295BB49800EA5D5E /* LaunchScreen.storyboard */; };
 		EF622145295BB72800EA5D5E /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF622144295BB72800EA5D5E /* DB.swift */; };
+		EF6EDAAB29676ECB00ED7066 /* UsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EDAAA29676ECA00ED7066 /* UsuarioTableViewController.swift */; };
+		EF6EDAAD29676F1800ED7066 /* UsuarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EDAAC29676F1800ED7066 /* UsuarioController.swift */; };
+		EF6EDAB429676FA700ED7066 /* UsuarioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EDAB229676FA700ED7066 /* UsuarioTableViewCell.swift */; };
+		EF6EDAB529676FA700ED7066 /* UsuarioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */; };
 		EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */; };
+		EFCDB8FD29687FB4002C0044 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB8FC29687FB4002C0044 /* Usuario.swift */; };
+		EFCDB8FF296883E9002C0044 /* UsuarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */; };
+		EFCDB901296888D6002C0044 /* Rol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB900296888D6002C0044 /* Rol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +66,14 @@
 		EF622138295BB49800EA5D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF62213A295BB49800EA5D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF622144295BB72800EA5D5E /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		EF6EDAAA29676ECA00ED7066 /* UsuarioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioTableViewController.swift; sourceTree = "<group>"; };
+		EF6EDAAC29676F1800ED7066 /* UsuarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioController.swift; sourceTree = "<group>"; };
+		EF6EDAB229676FA700ED7066 /* UsuarioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioTableViewCell.swift; sourceTree = "<group>"; };
+		EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsuarioTableViewCell.xib; sourceTree = "<group>"; };
 		EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
+		EFCDB8FC29687FB4002C0044 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewModel.swift; sourceTree = "<group>"; };
+		EFCDB900296888D6002C0044 /* Rol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,14 +105,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EF35867629660E15004A2493 /* DDepartamento */ = {
+		EF35867629660E15004A2493 /* Departamento */ = {
 			isa = PBXGroup;
 			children = (
 				EF35867229660DF2004A2493 /* DepartamentoTableViewCell.swift */,
 				EF35867B29662454004A2493 /* DepartamentoTableViewController.swift */,
 				EF35867F29664FF8004A2493 /* DepartamentoController.swift */,
 			);
-			path = DDepartamento;
+			path = Departamento;
 			sourceTree = "<group>";
 		};
 		EF62211D295BB49600EA5D5E = {
@@ -143,6 +157,8 @@
 				EF0E8442295CD14100E3415B /* Departamento.swift */,
 				EF0E8444295CD1B100E3415B /* Area.swift */,
 				EF0E8446295CD20700E3415B /* Result.swift */,
+				EFCDB8FC29687FB4002C0044 /* Usuario.swift */,
+				EFCDB900296888D6002C0044 /* Rol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +169,7 @@
 				EF622144295BB72800EA5D5E /* DB.swift */,
 				EF0E8448295CD38E00E3415B /* ProductoViewModel.swift */,
 				EF3586792966124D004A2493 /* DepartamentoViewModel.swift */,
+				EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -164,6 +181,7 @@
 				EF622137295BB49800EA5D5E /* LaunchScreen.storyboard */,
 				EF2D144D295E69C300561FF6 /* ProductoTableViewCell.xib */,
 				EF35867329660DF2004A2493 /* DepartamentoTableViewCell.xib */,
+				EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,10 +189,21 @@
 		EF622143295BB4E100EA5D5E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EF35867629660E15004A2493 /* DDepartamento */,
+				EF6EDAA929676E2000ED7066 /* Usuario */,
+				EF35867629660E15004A2493 /* Departamento */,
 				EFB5EFF5295E68ED009B1802 /* Producto */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF6EDAA929676E2000ED7066 /* Usuario */ = {
+			isa = PBXGroup;
+			children = (
+				EF6EDAAA29676ECA00ED7066 /* UsuarioTableViewController.swift */,
+				EF6EDAAC29676F1800ED7066 /* UsuarioController.swift */,
+				EF6EDAB229676FA700ED7066 /* UsuarioTableViewCell.swift */,
+			);
+			path = Usuario;
 			sourceTree = "<group>";
 		};
 		EFB5EFF5295E68ED009B1802 /* Producto */ = {
@@ -247,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6EDAB529676FA700ED7066 /* UsuarioTableViewCell.xib in Resources */,
 				EF35867529660DF2004A2493 /* DepartamentoTableViewCell.xib in Resources */,
 				EF622139295BB49800EA5D5E /* LaunchScreen.storyboard in Resources */,
 				EF2D144F295E69C300561FF6 /* ProductoTableViewCell.xib in Resources */,
@@ -306,18 +336,24 @@
 			files = (
 				EF622134295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld in Sources */,
 				EF35868029664FF8004A2493 /* DepartamentoController.swift in Sources */,
+				EFCDB8FD29687FB4002C0044 /* Usuario.swift in Sources */,
+				EFCDB8FF296883E9002C0044 /* UsuarioViewModel.swift in Sources */,
 				EF35867429660DF2004A2493 /* DepartamentoTableViewCell.swift in Sources */,
 				EF0E8443295CD14100E3415B /* Departamento.swift in Sources */,
+				EF6EDAB429676FA700ED7066 /* UsuarioTableViewCell.swift in Sources */,
 				EF62212E295BB49600EA5D5E /* ProductoController.swift in Sources */,
 				EF62212A295BB49600EA5D5E /* AppDelegate.swift in Sources */,
 				EF0E8441295CD0E800E3415B /* Proveedor.swift in Sources */,
 				EF35867A2966124D004A2493 /* DepartamentoViewModel.swift in Sources */,
 				EF0E843F295CCFB300E3415B /* Producto.swift in Sources */,
 				EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */,
+				EF6EDAAB29676ECB00ED7066 /* UsuarioTableViewController.swift in Sources */,
 				EF0E8447295CD20700E3415B /* Result.swift in Sources */,
 				EF622145295BB72800EA5D5E /* DB.swift in Sources */,
 				EF35867C29662454004A2493 /* DepartamentoTableViewController.swift in Sources */,
 				EF0E8445295CD1B100E3415B /* Area.swift in Sources */,
+				EF6EDAAD29676F1800ED7066 /* UsuarioController.swift in Sources */,
+				EFCDB901296888D6002C0044 /* Rol.swift in Sources */,
 				EF2D144E295E69C300561FF6 /* ProductoTableViewCell.swift in Sources */,
 				EF62212C295BB49600EA5D5E /* SceneDelegate.swift in Sources */,
 				EF0E8449295CD38E00E3415B /* ProductoViewModel.swift in Sources */,
@@ -477,7 +513,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -511,7 +547,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

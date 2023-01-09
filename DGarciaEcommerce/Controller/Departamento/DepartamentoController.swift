@@ -24,7 +24,6 @@ class DepartamentoController: UIViewController {
     }
     
     func validar(){
-        print(idDepartamento)
         if idDepartamento != nil {
             
             let departamentoModel = departamentoViewModel.GetById(idDepartamento: idDepartamento!).Object as! Departamento
@@ -94,7 +93,7 @@ class DepartamentoController: UIViewController {
                 alert.addAction(ok)
                 self.present(alert, animated: true)
             } else {
-                let alert = UIAlertController(title: "Error", message: "¡Departamento no insertado! Intentalo más tarde", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Error", message: "¡Departamento no actualizado! Intentalo más tarde", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default)
                 alert.addAction(ok)
                 self.present(alert, animated: true)

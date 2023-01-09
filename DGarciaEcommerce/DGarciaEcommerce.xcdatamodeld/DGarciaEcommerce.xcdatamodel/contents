@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22C65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Rol" representedClassName="Rol" syncable="YES">
+        <attribute name="nombre" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Usuario" representedClassName="Usuario" syncable="YES">
+        <attribute name="apellidoMaterno" optional="YES" attributeType="String"/>
+        <attribute name="apellidoPaterno" attributeType="String"/>
+        <attribute name="celular" optional="YES" attributeType="String"/>
+        <attribute name="curp" optional="YES" attributeType="String"/>
+        <attribute name="email" attributeType="String"/>
+        <attribute name="fechaNacimiento" attributeType="Date" minDateTimeInterval="-1609385160" usesScalarValueType="NO"/>
+        <attribute name="imagen" optional="YES" attributeType="String"/>
+        <attribute name="nombre" attributeType="String"/>
+        <attribute name="password" attributeType="String"/>
+        <attribute name="sexo" attributeType="String"/>
+        <attribute name="telefono" attributeType="String"/>
+        <attribute name="userName" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="userName"/>
+            </uniquenessConstraint>
+            <uniquenessConstraint>
+                <constraint value="email"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
 </model>

@@ -37,7 +37,6 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func validar(){
-        print(idProducto)
         if idProducto != nil {
             
             let productoModel = productoViewmodel.GetById(idProducto: idProducto!).Object as! Producto
@@ -100,6 +99,7 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         let imageString : String
         
+        print(imageView.restorationIdentifier == "photo")
         if imageView.restorationIdentifier == "photo" {
             imageString = ""
         } else {

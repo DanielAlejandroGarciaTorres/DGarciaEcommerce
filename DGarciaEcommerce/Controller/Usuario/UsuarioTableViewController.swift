@@ -59,7 +59,7 @@ class UsuarioTableViewController: UITableViewController {
 
         cell.Nombre.text = "\(usuarios[indexPath.row].Nombre) \(usuarios[indexPath.row].ApelldioPaterno)"
         cell.UserName.text = usuarios[indexPath.row].UserName
-        cell.Correo.text = usuarios[indexPath.row].Nombre
+        cell.Correo.text = usuarios[indexPath.row].Email
         if usuarios[indexPath.row].Imagen == "" || usuarios[indexPath.row].Imagen == nil{
             cell.userImage.image = UIImage(systemName: "person.fill.xmark")
         } else {

@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import iOSDropDown
 
 class ProductoController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var NombreProducto: UITextField!
     @IBOutlet weak var PrecioUnitario: UITextField!
     @IBOutlet weak var Stock: UITextField!
-    @IBOutlet weak var IdProveedor: UITextField!
+    @IBOutlet weak var IdProveedor: DropDown!
     @IBOutlet weak var IdDepartamento: UITextField!
     @IBOutlet weak var Descripcion: UITextField!
     @IBOutlet weak var imageView: UIImageView!
@@ -21,6 +22,7 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
     var idProducto : Int? = nil
     let imagePicker = UIImagePickerController()
     let productoViewmodel = ProductoViewModel()
+    let proveedorViewModel = ProveedorViewModel()
     var productoModel : Producto? = nil
     
     override func viewDidLoad() {
@@ -33,7 +35,34 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         //productoViewmodel.GetAll()
 //        productoViewmodel.GetById(idProducto: 6)
+        ConfiguraDropDown()
+        LoadData()
+    }
+    
+    func ConfiguraDropDown() {
+        IdProveedor.optionArray = [String]()
+        IdProveedor.optionIds = [Int]()
+        IdProveedor.isSearchEnable = false
+        IdProveedor.selectedRowColor = .systemBlue
+        IdProveedor.arrowSize = 15
+        IdProveedor.arrowColor = .systemGray2
         
+    }
+    
+    func LoadData() {
+        
+        let result = proveedorViewModel.GetAll()
+        
+        if result.Correct {
+            
+            for proveedor in result.Objects as! [Proveedor]{
+                
+                IdProveedor.optionArray.append(proveedor.Nombre)
+                IdProveedor.optionIds?.append(proveedor.IdProveedor)
+                
+            }
+        }
+              
     }
     
     func validar(){
@@ -44,6 +73,7 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.NombreProducto.text = productoModel.Nombre
             self.PrecioUnitario.text = String(describing: productoModel.PrecioUnitario)
             self.Stock.text = String(describing: productoModel.Stock)
+//            self.IdProveedor.
             self.IdProveedor.text = String(describing: productoModel.Proveedor.IdProveedor)
             self.IdDepartamento.text = String(describing: productoModel.Departamento.IdDepartamento)
             self.Descripcion.text = productoModel.Descripcion

@@ -21,6 +21,8 @@
 		EF35867A2966124D004A2493 /* DepartamentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3586792966124D004A2493 /* DepartamentoViewModel.swift */; };
 		EF35867C29662454004A2493 /* DepartamentoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35867B29662454004A2493 /* DepartamentoTableViewController.swift */; };
 		EF35868029664FF8004A2493 /* DepartamentoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35867F29664FF8004A2493 /* DepartamentoController.swift */; };
+		EF540BB3296E326700862398 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF540BB2296E326700862398 /* iOSDropDown.framework */; };
+		EF540BB5296E32F300862398 /* ProveedorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF540BB4296E32F300862398 /* ProveedorViewModel.swift */; };
 		EF62212A295BB49600EA5D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF622129295BB49600EA5D5E /* AppDelegate.swift */; };
 		EF62212C295BB49600EA5D5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62212B295BB49600EA5D5E /* SceneDelegate.swift */; };
 		EF62212E295BB49600EA5D5E /* ProductoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62212D295BB49600EA5D5E /* ProductoController.swift */; };
@@ -33,6 +35,11 @@
 		EF6EDAAD29676F1800ED7066 /* UsuarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EDAAC29676F1800ED7066 /* UsuarioController.swift */; };
 		EF6EDAB429676FA700ED7066 /* UsuarioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EDAB229676FA700ED7066 /* UsuarioTableViewCell.swift */; };
 		EF6EDAB529676FA700ED7066 /* UsuarioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */; };
+		EF71ED80296DF39500AE4E06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF71ED7F296DF39500AE4E06 /* GoogleService-Info.plist */; };
+		EF71ED84296DF60000AE4E06 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EF71ED83296DF60000AE4E06 /* FirebaseAuth */; };
+		EF71ED86296DF60000AE4E06 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EF71ED85296DF60000AE4E06 /* FirebaseDatabase */; };
+		EF71ED88296DF60000AE4E06 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EF71ED87296DF60000AE4E06 /* FirebaseDatabaseSwift */; };
+		EF71ED8B296DF68800AE4E06 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71ED8A296DF68800AE4E06 /* SignUpController.swift */; };
 		EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */; };
 		EFCDB8FD29687FB4002C0044 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB8FC29687FB4002C0044 /* Usuario.swift */; };
 		EFCDB8FF296883E9002C0044 /* UsuarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */; };
@@ -56,6 +63,8 @@
 		EF3586792966124D004A2493 /* DepartamentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoViewModel.swift; sourceTree = "<group>"; };
 		EF35867B29662454004A2493 /* DepartamentoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoTableViewController.swift; sourceTree = "<group>"; };
 		EF35867F29664FF8004A2493 /* DepartamentoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoController.swift; sourceTree = "<group>"; };
+		EF540BB2296E326700862398 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF540BB4296E32F300862398 /* ProveedorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProveedorViewModel.swift; sourceTree = "<group>"; };
 		EF622126295BB49600EA5D5E /* DGarciaEcommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGarciaEcommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF622129295BB49600EA5D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF62212B295BB49600EA5D5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +79,8 @@
 		EF6EDAAC29676F1800ED7066 /* UsuarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioController.swift; sourceTree = "<group>"; };
 		EF6EDAB229676FA700ED7066 /* UsuarioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioTableViewCell.swift; sourceTree = "<group>"; };
 		EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsuarioTableViewCell.xib; sourceTree = "<group>"; };
+		EF71ED7F296DF39500AE4E06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF71ED8A296DF68800AE4E06 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
 		EFCDB8FC29687FB4002C0044 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewModel.swift; sourceTree = "<group>"; };
@@ -81,7 +92,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF540BB3296E326700862398 /* iOSDropDown.framework in Frameworks */,
+				EF71ED88296DF60000AE4E06 /* FirebaseDatabaseSwift in Frameworks */,
+				EF71ED86296DF60000AE4E06 /* FirebaseDatabase in Frameworks */,
 				A497D62073B472DD5EC80A20 /* Pods_DGarciaEcommerce.framework in Frameworks */,
+				EF71ED84296DF60000AE4E06 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +115,7 @@
 		9033F0EF1231E7A35D79AA52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF540BB2296E326700862398 /* iOSDropDown.framework */,
 				D229A692EE1624E79F8A18FA /* Pods_DGarciaEcommerce.framework */,
 			);
 			name = Frameworks;
@@ -144,6 +160,7 @@
 				EF62212B295BB49600EA5D5E /* SceneDelegate.swift */,
 				EF622135295BB49800EA5D5E /* Assets.xcassets */,
 				EF62213A295BB49800EA5D5E /* Info.plist */,
+				EF71ED7F296DF39500AE4E06 /* GoogleService-Info.plist */,
 				EF622132295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld */,
 			);
 			path = DGarciaEcommerce;
@@ -170,6 +187,7 @@
 				EF0E8448295CD38E00E3415B /* ProductoViewModel.swift */,
 				EF3586792966124D004A2493 /* DepartamentoViewModel.swift */,
 				EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */,
+				EF540BB4296E32F300862398 /* ProveedorViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -189,6 +207,7 @@
 		EF622143295BB4E100EA5D5E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF71ED89296DF65A00AE4E06 /* Autenticacion */,
 				EF6EDAA929676E2000ED7066 /* Usuario */,
 				EF35867629660E15004A2493 /* Departamento */,
 				EFB5EFF5295E68ED009B1802 /* Producto */,
@@ -204,6 +223,14 @@
 				EF6EDAB229676FA700ED7066 /* UsuarioTableViewCell.swift */,
 			);
 			path = Usuario;
+			sourceTree = "<group>";
+		};
+		EF71ED89296DF65A00AE4E06 /* Autenticacion */ = {
+			isa = PBXGroup;
+			children = (
+				EF71ED8A296DF68800AE4E06 /* SignUpController.swift */,
+			);
+			path = Autenticacion;
 			sourceTree = "<group>";
 		};
 		EFB5EFF5295E68ED009B1802 /* Producto */ = {
@@ -235,6 +262,9 @@
 			);
 			name = DGarciaEcommerce;
 			packageProductDependencies = (
+				EF71ED83296DF60000AE4E06 /* FirebaseAuth */,
+				EF71ED85296DF60000AE4E06 /* FirebaseDatabase */,
+				EF71ED87296DF60000AE4E06 /* FirebaseDatabaseSwift */,
 			);
 			productName = DGarciaEcommerce;
 			productReference = EF622126295BB49600EA5D5E /* DGarciaEcommerce.app */;
@@ -265,6 +295,7 @@
 			);
 			mainGroup = EF62211D295BB49600EA5D5E;
 			packageReferences = (
+				EF71ED82296DF60000AE4E06 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = EF622127295BB49600EA5D5E /* Products */;
 			projectDirPath = "";
@@ -286,6 +317,7 @@
 				EF2D144F295E69C300561FF6 /* ProductoTableViewCell.xib in Resources */,
 				EF622136295BB49800EA5D5E /* Assets.xcassets in Resources */,
 				EF622131295BB49600EA5D5E /* Main.storyboard in Resources */,
+				EF71ED80296DF39500AE4E06 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +373,7 @@
 				EF622134295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld in Sources */,
 				EF35868029664FF8004A2493 /* DepartamentoController.swift in Sources */,
 				EFCDB8FD29687FB4002C0044 /* Usuario.swift in Sources */,
+				EF540BB5296E32F300862398 /* ProveedorViewModel.swift in Sources */,
 				EFCDB8FF296883E9002C0044 /* UsuarioViewModel.swift in Sources */,
 				EF35867429660DF2004A2493 /* DepartamentoTableViewCell.swift in Sources */,
 				EF0E8443295CD14100E3415B /* Departamento.swift in Sources */,
@@ -349,6 +382,7 @@
 				EF62212A295BB49600EA5D5E /* AppDelegate.swift in Sources */,
 				EF0E8441295CD0E800E3415B /* Proveedor.swift in Sources */,
 				EF35867A2966124D004A2493 /* DepartamentoViewModel.swift in Sources */,
+				EF71ED8B296DF68800AE4E06 /* SignUpController.swift in Sources */,
 				EF0E843F295CCFB300E3415B /* Producto.swift in Sources */,
 				EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */,
 				EF6EDAAB29676ECB00ED7066 /* UsuarioTableViewController.swift in Sources */,
@@ -590,6 +624,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF71ED82296DF60000AE4E06 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF71ED83296DF60000AE4E06 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF71ED82296DF60000AE4E06 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		EF71ED85296DF60000AE4E06 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF71ED82296DF60000AE4E06 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		EF71ED87296DF60000AE4E06 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF71ED82296DF60000AE4E06 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		EF622132295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld */ = {

@@ -141,10 +141,7 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.IdDepartamento.text = self.IdDepartamento.optionArray[(self.IdDepartamento.optionIds?.firstIndex(of: productoModel.Departamento.IdDepartamento))!]
             self.IdDepartamento.selectedIndex = self.IdDepartamento.optionIds?.firstIndex(of: productoModel.Departamento.IdDepartamento)!
             
-            
-//            self.IdDepartamento.text = String(describing: productoModel.Departamento.IdDepartamento)
             self.Descripcion.text = productoModel.Descripcion
-//            self.imageView.image = UIImage(data: NSData(base64Encoded: productoModel.Imagen, options: .ignoreUnknownCharacters)) ?? UIImage(named: "photo")
             if productoModel.Imagen == "" || productoModel.Imagen == nil {
                 self.imageView.image = UIImage(systemName: "photo")
             } else {

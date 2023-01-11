@@ -14,6 +14,8 @@
 		EF0E8445295CD1B100E3415B /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8444295CD1B100E3415B /* Area.swift */; };
 		EF0E8447295CD20700E3415B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8446295CD20700E3415B /* Result.swift */; };
 		EF0E8449295CD38E00E3415B /* ProductoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8448295CD38E00E3415B /* ProductoViewModel.swift */; };
+		EF160071296F29D400BD7CAD /* CreateAcccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF160070296F29D400BD7CAD /* CreateAcccountController.swift */; };
+		EF160077296F473A00BD7CAD /* AreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF160076296F473A00BD7CAD /* AreaViewModel.swift */; };
 		EF2D144E295E69C300561FF6 /* ProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D144C295E69C300561FF6 /* ProductoTableViewCell.swift */; };
 		EF2D144F295E69C300561FF6 /* ProductoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF2D144D295E69C300561FF6 /* ProductoTableViewCell.xib */; };
 		EF35867429660DF2004A2493 /* DepartamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35867229660DF2004A2493 /* DepartamentoTableViewCell.swift */; };
@@ -56,6 +58,8 @@
 		EF0E8444295CD1B100E3415B /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		EF0E8446295CD20700E3415B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EF0E8448295CD38E00E3415B /* ProductoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoViewModel.swift; sourceTree = "<group>"; };
+		EF160070296F29D400BD7CAD /* CreateAcccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcccountController.swift; sourceTree = "<group>"; };
+		EF160076296F473A00BD7CAD /* AreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewModel.swift; sourceTree = "<group>"; };
 		EF2D144C295E69C300561FF6 /* ProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductoTableViewCell.swift; path = ../../ProductoTableViewCell.swift; sourceTree = "<group>"; };
 		EF2D144D295E69C300561FF6 /* ProductoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProductoTableViewCell.xib; path = ../ProductoTableViewCell.xib; sourceTree = "<group>"; };
 		EF35867229660DF2004A2493 /* DepartamentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoTableViewCell.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 				EF3586792966124D004A2493 /* DepartamentoViewModel.swift */,
 				EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */,
 				EF540BB4296E32F300862398 /* ProveedorViewModel.swift */,
+				EF160076296F473A00BD7CAD /* AreaViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				EF71ED8A296DF68800AE4E06 /* SignUpController.swift */,
+				EF160070296F29D400BD7CAD /* CreateAcccountController.swift */,
 			);
 			path = Autenticacion;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 				EF540BB5296E32F300862398 /* ProveedorViewModel.swift in Sources */,
 				EFCDB8FF296883E9002C0044 /* UsuarioViewModel.swift in Sources */,
 				EF35867429660DF2004A2493 /* DepartamentoTableViewCell.swift in Sources */,
+				EF160077296F473A00BD7CAD /* AreaViewModel.swift in Sources */,
 				EF0E8443295CD14100E3415B /* Departamento.swift in Sources */,
 				EF6EDAB429676FA700ED7066 /* UsuarioTableViewCell.swift in Sources */,
 				EF62212E295BB49600EA5D5E /* ProductoController.swift in Sources */,
@@ -391,6 +398,7 @@
 				EF35867C29662454004A2493 /* DepartamentoTableViewController.swift in Sources */,
 				EF0E8445295CD1B100E3415B /* Area.swift in Sources */,
 				EF6EDAAD29676F1800ED7066 /* UsuarioController.swift in Sources */,
+				EF160071296F29D400BD7CAD /* CreateAcccountController.swift in Sources */,
 				EFCDB901296888D6002C0044 /* Rol.swift in Sources */,
 				EF2D144E295E69C300561FF6 /* ProductoTableViewCell.swift in Sources */,
 				EF62212C295BB49600EA5D5E /* SceneDelegate.swift in Sources */,

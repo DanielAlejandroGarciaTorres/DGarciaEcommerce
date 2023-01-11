@@ -134,6 +134,45 @@ class DepartamentoViewModel{
         return result
     }
     
+    
+    func GetByIdDepartamentos(idArea : Int) -> Result {
+        var result = Result()
+        let context = DB.init()
+        let query = """
+                SELECT
+                IdDepartamento,
+                Nombre,
+                IdArea
+                FROM Departamento
+                WHERE IdArea == \(idArea)
+                """
+        var statement : OpaquePointer? = nil
+        
+        do{
+            if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK {
+                
+                result.Objects = []
+                while(sqlite3_step(statement) == SQLITE_ROW) {
+                    let departamento = Departamento(
+                        IdDepartamento: Int(sqlite3_column_int(statement, 0)),
+                        Nombre: String(cString: sqlite3_column_text(statement, 1)),
+                        Area: Area(
+                            IdArea: Int(sqlite3_column_int(statement, 2)),
+                            Nombre: ""))
+                    result.Objects?.append(departamento)
+                }
+                result.Correct = true
+            }
+        } catch let error {
+            result.Correct = false
+            result.ErrorMessage = error.localizedDescription
+            result.Ex = error
+        }
+        sqlite3_finalize(statement)
+        sqlite3_close(context.db)
+        return result
+    }
+    
     func GetById(idDepartamento : Int) -> Result {
         var result = Result()
         let context = DB.init()

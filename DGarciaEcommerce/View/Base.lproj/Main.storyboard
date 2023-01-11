@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d0T-Pa-0tM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bBe-66-4te">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -19,44 +19,83 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ccp-Ne-53s" userLabel="Inputs ">
-                                <rect key="frame" x="37.666666666666657" y="256" width="300" height="300"/>
+                                <rect key="frame" x="37.666666666666657" y="255.99999999999997" width="300" height="300.33333333333326"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre producto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERh-fz-etn">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="41.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="34.333333333333336"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Precio unitario" textAlignment="natural" minimumFontSize="17" id="WML-IQ-OrX">
-                                        <rect key="frame" x="0.0" y="51.666666666666671" width="300" height="41.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="44.333333333333329" width="300" height="34.333333333333329"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stock" textAlignment="natural" minimumFontSize="17" id="8E5-GF-fzz">
-                                        <rect key="frame" x="0.0" y="103.33333333333333" width="300" height="41.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="88.666666666666671" width="300" height="34.333333333333329"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Id proveedor" textAlignment="natural" minimumFontSize="17" id="qkE-Q9-3Rc" customClass="JRDropDown">
-                                        <rect key="frame" x="0.0" y="155" width="300" height="41.666666666666657"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecciona  un departmento" textAlignment="natural" minimumFontSize="17" id="qkE-Q9-3Rc" customClass="JRDropDown">
+                                        <rect key="frame" x="0.0" y="133" width="300" height="34.333333333333343"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
+                                                <color key="value" systemColor="systemCyanColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="arrowSize">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Id departamento" textAlignment="natural" minimumFontSize="17" id="asK-M1-TYj">
-                                        <rect key="frame" x="0.0" y="206.66666666666666" width="300" height="41.666666666666657"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione el area del producto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ngb-Ex-Xq5" customClass="JRDropDown">
+                                        <rect key="frame" x="0.0" y="177.33333333333331" width="300" height="34.333333333333343"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
+                                                <color key="value" systemColor="systemCyanColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="arrowSize">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione departamento" textAlignment="natural" minimumFontSize="17" id="asK-M1-TYj" customClass="JRDropDown">
+                                        <rect key="frame" x="0.0" y="221.66666666666666" width="300" height="34.333333333333343"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
+                                                <color key="value" systemColor="systemCyanColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="arrowSize">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripcion" textAlignment="natural" minimumFontSize="17" id="0vB-gQ-5Ls">
-                                        <rect key="frame" x="0.0" y="258.33333333333331" width="300" height="41.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="266" width="300" height="34.333333333333314"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -130,6 +169,7 @@
                     <connections>
                         <outlet property="ButtonOultet" destination="ggR-ug-ODQ" id="Ezn-TY-AwX"/>
                         <outlet property="Descripcion" destination="0vB-gQ-5Ls" id="eeq-dR-apo"/>
+                        <outlet property="IdArea" destination="Ngb-Ex-Xq5" id="UHH-8x-PxW"/>
                         <outlet property="IdDepartamento" destination="asK-M1-TYj" id="QMh-Mi-chq"/>
                         <outlet property="IdProveedor" destination="qkE-Q9-3Rc" id="uX0-Rk-hWR"/>
                         <outlet property="NombreProducto" destination="ERh-fz-etn" id="4IP-ZI-jUo"/>
@@ -234,6 +274,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBt-wW-4C2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1814" y="981"/>
+        </scene>
+        <!--Inicial Navigation Controller-->
+        <scene sceneID="m7L-Fc-rz3">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="bBe-66-4te" userLabel="Inicial Navigation Controller" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GcE-g2-nSD">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TiX-6S-EVo" kind="relationship" relationship="rootViewController" id="Dbw-XS-bey"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hco-qG-Ggm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3164" y="453"/>
         </scene>
         <!--Sign Up Controller-->
         <scene sceneID="0le-d3-rT8">
@@ -357,9 +413,11 @@
                             <constraint firstItem="o2O-oz-cE2" firstAttribute="bottom" secondItem="vp3-cg-DEu" secondAttribute="bottom" constant="10" id="ulS-5Z-gr2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8QE-hM-mAW"/>
                     <connections>
                         <outlet property="Contrasenia" destination="9P8-40-7fm" id="Kjk-Ks-Zku"/>
                         <outlet property="CorreoField" destination="vbn-VU-WSF" id="dOf-Zg-2n9"/>
+                        <segue destination="d0T-Pa-0tM" kind="show" identifier="LogInSegue" id="hFL-JS-IOU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqz-5c-EI5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -369,16 +427,16 @@
         <!--CreateAccount Controller-->
         <scene sceneID="29Z-JU-QlD">
             <objects>
-                <viewController id="uHZ-1X-AOJ" userLabel="CreateAccount Controller" sceneMemberID="viewController">
+                <viewController id="uHZ-1X-AOJ" userLabel="CreateAccount Controller" customClass="CreateAcccountController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LG7-0a-H87">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondoPrincipal" translatesAutoresizingMaskIntoConstraints="NO" id="S3x-CL-tJR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="58u-85-tQU">
-                                <rect key="frame" x="37.666666666666657" y="187.66666666666663" width="300" height="380"/>
+                                <rect key="frame" x="37.666666666666657" y="216" width="300" height="380"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbf-Nr-JVB">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
@@ -400,7 +458,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2J-mf-iTe">
-                                        <rect key="frame" x="0.0" y="110.00000000000003" width="300" height="20"/>
+                                        <rect key="frame" x="0.0" y="110" width="300" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Up9-AT-eEs"/>
                                         </constraints>
@@ -409,7 +467,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owQ-FX-6Wo">
-                                        <rect key="frame" x="0.0" y="150.00000000000003" width="300" height="50"/>
+                                        <rect key="frame" x="0.0" y="150" width="300" height="50"/>
                                         <color key="backgroundColor" red="0.36470589040000001" green="0.58039218189999997" blue="0.75686275960000005" alpha="0.23548737580000001" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iyD-eM-v2Z"/>
@@ -419,7 +477,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzE-Dh-v7r">
-                                        <rect key="frame" x="0.0" y="220.00000000000003" width="300" height="20"/>
+                                        <rect key="frame" x="0.0" y="220" width="300" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="P6H-ML-MG5"/>
                                         </constraints>
@@ -446,6 +504,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Register!" cornerStyle="capsule">
                                             <color key="baseBackgroundColor" red="0.59215686270000001" green="0.82352941180000006" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="RegisterButton:" destination="uHZ-1X-AOJ" eventType="touchUpInside" id="jDL-ax-eXs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -453,7 +514,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vke-h1-SZj">
-                                <rect key="frame" x="45.333333333333343" y="89.666666666666671" width="284.33333333333326" height="48.000000000000014"/>
+                                <rect key="frame" x="45.333333333333343" y="118" width="284.33333333333326" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -473,6 +534,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mB4-qK-DgG"/>
+                    <connections>
+                        <outlet property="ConfirmPasswordField" destination="kg3-QR-W5g" id="sRN-1k-j0l"/>
+                        <outlet property="CorreoField" destination="Nv8-Mr-7ka" id="WQG-3F-RKf"/>
+                        <outlet property="PasswordField" destination="owQ-FX-6Wo" id="8g6-uG-WhT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDk-6O-kWv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -935,6 +1001,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

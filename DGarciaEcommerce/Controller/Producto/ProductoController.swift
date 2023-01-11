@@ -14,52 +14,108 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var PrecioUnitario: UITextField!
     @IBOutlet weak var Stock: UITextField!
     @IBOutlet weak var IdProveedor: DropDown!
-    @IBOutlet weak var IdDepartamento: UITextField!
+    @IBOutlet weak var IdArea: DropDown!
+    @IBOutlet weak var IdDepartamento: DropDown!
     @IBOutlet weak var Descripcion: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var ButtonOultet: UIButton!
     
     var idProducto : Int? = nil
+    
+    var idProveedorSelected : Int? = nil
+//    var idAreaSelected : Int? = nil
+    var idDepartamentoSelected: Int? = nil
+    
     let imagePicker = UIImagePickerController()
     let productoViewmodel = ProductoViewModel()
     let proveedorViewModel = ProveedorViewModel()
+    let departamentoViewModel = DepartamentoViewModel()
+    let areaViewModel = AreaViewModel()
     var productoModel : Producto? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        validar()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         imagePicker.isEditing = false
         // Do any additional setup after loading the view.
         
         //productoViewmodel.GetAll()
-//        productoViewmodel.GetById(idProducto: 6)
+        //        productoViewmodel.GetById(idProducto: 6)
         ConfiguraDropDown()
         LoadData()
+        
+        IdProveedor.didSelect { selectedText, index, id  in
+            self.idProveedorSelected = id
+        }
+        
+        IdArea.didSelect { selectedText, index, id in
+            self.LoadDepartamento(idArea: id)
+        }
+        
+        IdDepartamento.didSelect{ selectedText, index, id in
+            self.idDepartamentoSelected = id
+        }
+        
+        
+        validar()
+        
     }
     
     func ConfiguraDropDown() {
         IdProveedor.optionArray = [String]()
         IdProveedor.optionIds = [Int]()
         IdProveedor.isSearchEnable = false
-        IdProveedor.selectedRowColor = .systemBlue
-        IdProveedor.arrowSize = 15
-        IdProveedor.arrowColor = .systemGray2
+        IdArea.optionArray = [String]()
+        IdArea.optionIds = [Int]()
+        IdArea.isSearchEnable = false
+        IdDepartamento.isSearchEnable = false
         
+//        IdProveedor.selectedRowColor = .systemBlue
+//        IdProveedor.arrowSize = 15
+//        IdProveedor.arrowColor = .systemGray2
+//
+    }
+    
+    func LoadDepartamento(idArea : Int){
+        let result = departamentoViewModel.GetByIdDepartamentos(idArea: idArea)
+        
+        if result.Correct {
+            
+            IdDepartamento.optionArray = [String]()
+            IdDepartamento.optionIds = [Int]()
+            
+            for departamento in result.Objects as! [Departamento]{
+                
+                IdDepartamento.optionArray.append(departamento.Nombre)
+                IdDepartamento.optionIds?.append(departamento.IdDepartamento)
+                
+            }
+        }
     }
     
     func LoadData() {
         
-        let result = proveedorViewModel.GetAll()
+        let resultProveedor = proveedorViewModel.GetAll()
         
-        if result.Correct {
+        if resultProveedor.Correct {
             
-            for proveedor in result.Objects as! [Proveedor]{
+            for proveedor in resultProveedor.Objects as! [Proveedor]{
                 
                 IdProveedor.optionArray.append(proveedor.Nombre)
                 IdProveedor.optionIds?.append(proveedor.IdProveedor)
                 
+            }
+        }
+        
+        let resultArea = areaViewModel.GetAll()
+        
+        if resultArea.Correct {
+            
+            for area in resultArea.Objects as! [Area] {
+                IdArea.optionArray.append(area.Nombre)
+                IdArea.optionIds?.append(area.IdArea)
             }
         }
               
@@ -73,9 +129,20 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.NombreProducto.text = productoModel.Nombre
             self.PrecioUnitario.text = String(describing: productoModel.PrecioUnitario)
             self.Stock.text = String(describing: productoModel.Stock)
-//            self.IdProveedor.
-            self.IdProveedor.text = String(describing: productoModel.Proveedor.IdProveedor)
-            self.IdDepartamento.text = String(describing: productoModel.Departamento.IdDepartamento)
+           
+            self.IdProveedor.text = self.IdProveedor.optionArray[(self.IdProveedor.optionIds?.firstIndex(of: productoModel.Proveedor.IdProveedor))!]
+            self.IdProveedor.selectedIndex = (self.IdProveedor.optionIds?.firstIndex(of: productoModel.Proveedor.IdProveedor))!
+            self.idProveedorSelected = self.IdProveedor.optionIds![(self.IdProveedor.optionIds?.firstIndex(of: productoModel.Proveedor.IdProveedor))!]
+            
+            self.IdArea.text = self.IdArea.optionArray[(self.IdArea.optionIds?.firstIndex(of: productoModel.Departamento.Area.IdArea))!]
+            self.IdArea.selectedIndex = (self.IdArea.optionIds?.firstIndex(of: productoModel.Departamento.Area.IdArea))!
+            self.idDepartamentoSelected = self.IdArea.optionIds![(self.IdArea.optionIds?.firstIndex(of: productoModel.Departamento.Area.IdArea))!]
+            self.LoadDepartamento(idArea: self.idDepartamentoSelected!)
+            self.IdDepartamento.text = self.IdDepartamento.optionArray[(self.IdDepartamento.optionIds?.firstIndex(of: productoModel.Departamento.IdDepartamento))!]
+            self.IdDepartamento.selectedIndex = self.IdDepartamento.optionIds?.firstIndex(of: productoModel.Departamento.IdDepartamento)!
+            
+            
+//            self.IdDepartamento.text = String(describing: productoModel.Departamento.IdDepartamento)
             self.Descripcion.text = productoModel.Descripcion
 //            self.imageView.image = UIImage(data: NSData(base64Encoded: productoModel.Imagen, options: .ignoreUnknownCharacters)) ?? UIImage(named: "photo")
             if productoModel.Imagen == "" || productoModel.Imagen == nil {
@@ -142,8 +209,8 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
             Nombre: NombreProducto.text!,
             PrecioUnitario: Double(PrecioUnitario.text!)!,
             Stock: Int(Stock.text!)!,
-            Proveedor: Proveedor.init(IdProveedor: Int(self.IdProveedor.text!)!, Nombre: "", Telefono: ""),
-            Departamento: Departamento.init(IdDepartamento: Int(self.IdDepartamento.text!)!,Nombre: "", Area: Area.init(IdArea: 0, Nombre: "")),
+            Proveedor: Proveedor.init(IdProveedor: self.idProveedorSelected!, Nombre: "", Telefono: ""),
+            Departamento: Departamento.init(IdDepartamento: self.idDepartamentoSelected!,Nombre: "", Area: Area.init(IdArea: 0, Nombre: "")),
             Descripcion: Descripcion.text!,
             Imagen: imageString)
         
@@ -159,15 +226,21 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
                     self.PrecioUnitario.text = ""
                     self.Stock.text = ""
                     self.IdProveedor.text = ""
+                    self.IdArea.text = ""
                     self.IdDepartamento.text = ""
                     self.Descripcion.text = ""
                     self.imageView.image = UIImage(systemName: "photo")
+                    self.IdDepartamento.optionArray = [String]()
+                    self.IdDepartamento.optionIds = [Int]()
                 })
                 alert.addAction(ok)
                 self.present(alert, animated: true)
             } else {
                 let alert = UIAlertController(title: "Error", message: "¡Producto no insertado! Intentalo más tarde.", preferredStyle: .alert)
-                            }
+                let ok = UIAlertAction(title: "OK", style: .default)
+                alert.addAction(ok)
+                self.present(alert, animated: true)
+            }
         } else if sender.currentTitle! == "Actualizar" {
             
             result = productoViewmodel.Update(producto: productoModel!, idProducto: idProducto!)
@@ -179,9 +252,12 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
                     self.PrecioUnitario.text = ""
                     self.Stock.text = ""
                     self.IdProveedor.text = ""
+                    self.IdArea.text = ""
                     self.IdDepartamento.text = ""
                     self.Descripcion.text = ""
                     self.imageView.image = UIImage(systemName: "photo")
+                    self.IdDepartamento.optionArray = [String]()
+                    self.IdDepartamento.optionIds = [Int]()
                 })
                 alert.addAction(ok)
                 self.present(alert, animated: true)

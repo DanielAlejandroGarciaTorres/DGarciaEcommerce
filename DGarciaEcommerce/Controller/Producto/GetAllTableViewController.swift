@@ -30,6 +30,8 @@ class GetAllTableViewController: UITableViewController{
         LoadData()
     }
     
+    
+    
     // MARK: - Table view data source
     
     func LoadData(){

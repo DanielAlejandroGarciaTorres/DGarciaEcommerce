@@ -15,10 +15,12 @@ class SignUpController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        CorreoField.text = "dgarciatorres@gmail.com"
+        Contrasenia.text = "pass@word1"
         // Do any additional setup after loading the view.
     }
-        
+    
 
     @IBAction func LogIn(_ sender: Any) {
         
@@ -36,9 +38,14 @@ class SignUpController: UIViewController {
         Auth.auth().signIn(withEmail: CorreoField.text!, password: Contrasenia.text!) { authResult, error in
           if let error = error as? NSError {
             
-            print("Error: \(error.localizedDescription)")
+              let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+              let ok = UIAlertAction(title: "OK", style: .default)
+              alert.addAction(ok)
+              self.present(alert, animated: true)
             
           } else {
+              
+              self.performSegue(withIdentifier: "LogInSegue", sender: self)
 //            print("User signs up successfully")
 //            let newUserInfo = Auth.auth().currentUser
 //            let email = newUserInfo?.email
@@ -55,5 +62,4 @@ class SignUpController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

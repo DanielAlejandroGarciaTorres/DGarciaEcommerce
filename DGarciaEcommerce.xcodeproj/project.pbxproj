@@ -37,11 +37,18 @@
 		EF6EDAAD29676F1800ED7066 /* UsuarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EDAAC29676F1800ED7066 /* UsuarioController.swift */; };
 		EF6EDAB429676FA700ED7066 /* UsuarioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EDAB229676FA700ED7066 /* UsuarioTableViewCell.swift */; };
 		EF6EDAB529676FA700ED7066 /* UsuarioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */; };
+		EF6FD55029707ACB002C76F3 /* AreaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FD54F29707ACB002C76F3 /* AreaCollectionViewController.swift */; };
 		EF71ED80296DF39500AE4E06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF71ED7F296DF39500AE4E06 /* GoogleService-Info.plist */; };
 		EF71ED84296DF60000AE4E06 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EF71ED83296DF60000AE4E06 /* FirebaseAuth */; };
 		EF71ED86296DF60000AE4E06 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EF71ED85296DF60000AE4E06 /* FirebaseDatabase */; };
 		EF71ED88296DF60000AE4E06 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EF71ED87296DF60000AE4E06 /* FirebaseDatabaseSwift */; };
 		EF71ED8B296DF68800AE4E06 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71ED8A296DF68800AE4E06 /* SignUpController.swift */; };
+		EF81D89A29707BD900536325 /* GeneralCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D89829707BD900536325 /* GeneralCollectionViewCell.swift */; };
+		EF81D89B29707BD900536325 /* GeneralCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF81D89929707BD900536325 /* GeneralCollectionViewCell.xib */; };
+		EF81D89D2970953400536325 /* DepartamentoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D89C2970953400536325 /* DepartamentoCollectionViewController.swift */; };
+		EF81D8A129709E8000536325 /* ProductoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF81D89F29709E8000536325 /* ProductoCollectionViewCell.xib */; };
+		EF81D8A32970A46E00536325 /* ProductoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */; };
+		EF81D8A52970A5B800536325 /* ProductoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */; };
 		EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */; };
 		EFCDB8FD29687FB4002C0044 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB8FC29687FB4002C0044 /* Usuario.swift */; };
 		EFCDB8FF296883E9002C0044 /* UsuarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */; };
@@ -83,8 +90,15 @@
 		EF6EDAAC29676F1800ED7066 /* UsuarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioController.swift; sourceTree = "<group>"; };
 		EF6EDAB229676FA700ED7066 /* UsuarioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioTableViewCell.swift; sourceTree = "<group>"; };
 		EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsuarioTableViewCell.xib; sourceTree = "<group>"; };
+		EF6FD54F29707ACB002C76F3 /* AreaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCollectionViewController.swift; sourceTree = "<group>"; };
 		EF71ED7F296DF39500AE4E06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF71ED8A296DF68800AE4E06 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		EF81D89829707BD900536325 /* GeneralCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF81D89929707BD900536325 /* GeneralCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GeneralCollectionViewCell.xib; path = ../GeneralCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF81D89C2970953400536325 /* DepartamentoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoCollectionViewController.swift; sourceTree = "<group>"; };
+		EF81D89F29709E8000536325 /* ProductoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductoCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoCollectionViewController.swift; sourceTree = "<group>"; };
 		EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
 		EFCDB8FC29687FB4002C0044 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewModel.swift; sourceTree = "<group>"; };
@@ -131,6 +145,7 @@
 				EF35867229660DF2004A2493 /* DepartamentoTableViewCell.swift */,
 				EF35867B29662454004A2493 /* DepartamentoTableViewController.swift */,
 				EF35867F29664FF8004A2493 /* DepartamentoController.swift */,
+				EF81D89C2970953400536325 /* DepartamentoCollectionViewController.swift */,
 			);
 			path = Departamento;
 			sourceTree = "<group>";
@@ -205,6 +220,8 @@
 				EF2D144D295E69C300561FF6 /* ProductoTableViewCell.xib */,
 				EF35867329660DF2004A2493 /* DepartamentoTableViewCell.xib */,
 				EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */,
+				EF81D89929707BD900536325 /* GeneralCollectionViewCell.xib */,
+				EF81D89F29709E8000536325 /* ProductoCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +229,8 @@
 		EF622143295BB4E100EA5D5E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF81D89829707BD900536325 /* GeneralCollectionViewCell.swift */,
+				EF6FD54E29707AAF002C76F3 /* Area */,
 				EF71ED89296DF65A00AE4E06 /* Autenticacion */,
 				EF6EDAA929676E2000ED7066 /* Usuario */,
 				EF35867629660E15004A2493 /* Departamento */,
@@ -230,6 +249,14 @@
 			path = Usuario;
 			sourceTree = "<group>";
 		};
+		EF6FD54E29707AAF002C76F3 /* Area */ = {
+			isa = PBXGroup;
+			children = (
+				EF6FD54F29707ACB002C76F3 /* AreaCollectionViewController.swift */,
+			);
+			path = Area;
+			sourceTree = "<group>";
+		};
 		EF71ED89296DF65A00AE4E06 /* Autenticacion */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +272,8 @@
 				EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */,
 				EF62212D295BB49600EA5D5E /* ProductoController.swift */,
 				EF2D144C295E69C300561FF6 /* ProductoTableViewCell.swift */,
+				EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */,
+				EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */,
 			);
 			path = Producto;
 			sourceTree = "<group>";
@@ -319,7 +348,9 @@
 			files = (
 				EF6EDAB529676FA700ED7066 /* UsuarioTableViewCell.xib in Resources */,
 				EF35867529660DF2004A2493 /* DepartamentoTableViewCell.xib in Resources */,
+				EF81D8A129709E8000536325 /* ProductoCollectionViewCell.xib in Resources */,
 				EF622139295BB49800EA5D5E /* LaunchScreen.storyboard in Resources */,
+				EF81D89B29707BD900536325 /* GeneralCollectionViewCell.xib in Resources */,
 				EF2D144F295E69C300561FF6 /* ProductoTableViewCell.xib in Resources */,
 				EF622136295BB49800EA5D5E /* Assets.xcassets in Resources */,
 				EF622131295BB49600EA5D5E /* Main.storyboard in Resources */,
@@ -378,6 +409,8 @@
 			files = (
 				EF622134295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld in Sources */,
 				EF35868029664FF8004A2493 /* DepartamentoController.swift in Sources */,
+				EF81D89D2970953400536325 /* DepartamentoCollectionViewController.swift in Sources */,
+				EF81D89A29707BD900536325 /* GeneralCollectionViewCell.swift in Sources */,
 				EFCDB8FD29687FB4002C0044 /* Usuario.swift in Sources */,
 				EF540BB5296E32F300862398 /* ProveedorViewModel.swift in Sources */,
 				EFCDB8FF296883E9002C0044 /* UsuarioViewModel.swift in Sources */,
@@ -387,6 +420,7 @@
 				EF6EDAB429676FA700ED7066 /* UsuarioTableViewCell.swift in Sources */,
 				EF62212E295BB49600EA5D5E /* ProductoController.swift in Sources */,
 				EF62212A295BB49600EA5D5E /* AppDelegate.swift in Sources */,
+				EF81D8A32970A46E00536325 /* ProductoCollectionViewCell.swift in Sources */,
 				EF0E8441295CD0E800E3415B /* Proveedor.swift in Sources */,
 				EF35867A2966124D004A2493 /* DepartamentoViewModel.swift in Sources */,
 				EF71ED8B296DF68800AE4E06 /* SignUpController.swift in Sources */,
@@ -401,6 +435,8 @@
 				EF160071296F29D400BD7CAD /* CreateAcccountController.swift in Sources */,
 				EFCDB901296888D6002C0044 /* Rol.swift in Sources */,
 				EF2D144E295E69C300561FF6 /* ProductoTableViewCell.swift in Sources */,
+				EF81D8A52970A5B800536325 /* ProductoCollectionViewController.swift in Sources */,
+				EF6FD55029707ACB002C76F3 /* AreaCollectionViewController.swift in Sources */,
 				EF62212C295BB49600EA5D5E /* SceneDelegate.swift in Sources */,
 				EF0E8449295CD38E00E3415B /* ProductoViewModel.swift in Sources */,
 			);

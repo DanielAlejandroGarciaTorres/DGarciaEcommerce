@@ -146,6 +146,7 @@ class ProductoViewModel{
                 
                 result.Objects = []
                 while(sqlite3_step(statement) == SQLITE_ROW){
+                    
                     var description : String? = nil
                     if sqlite3_column_text(statement, 11) != nil {
                         description = String(cString: sqlite3_column_text(statement, 11))
@@ -171,6 +172,74 @@ class ProductoViewModel{
                                             Area: Area(
                                                 IdArea: Int(sqlite3_column_int(statement, 9)),
                                                 Nombre: String(cString: sqlite3_column_text(statement, 10))
+                                            )
+                                        ),
+                                        Descripcion: description ,
+                                        Imagen: imagen
+                                    )
+                    result.Objects?.append(producto)
+                }
+                result.Correct = true
+                
+            }
+            
+        } catch let error{
+            result.Correct = false
+            result.ErrorMessage = error.localizedDescription
+            result.Ex = error
+        }
+        sqlite3_finalize(statement)
+        sqlite3_close(context.db)
+        return result
+    }
+    
+    func GetByIdDepartamento (idDepartamento : Int) -> Result {
+        var result = Result()
+        let context = DB.init()
+        let query = """
+                SELECT IdProducto,
+                Nombre,
+                PrecioUnitario,
+                Stock,
+                IdProveedor,
+                IdDepartamento,
+                Descripcion,
+                Imagen
+                FROM Producto
+                WHERE IdDepartamento == \(idDepartamento)
+                """
+        var statement : OpaquePointer? = nil
+        
+        do {
+            if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK {
+                
+                result.Objects = []
+                while(sqlite3_step(statement) == SQLITE_ROW){
+                    var description : String? = nil
+                    if sqlite3_column_text(statement, 6) != nil {
+                        description = String(cString: sqlite3_column_text(statement, 6))
+                    }
+                    var imagen : String? = nil
+                    if sqlite3_column_text(statement, 7) != nil{
+                        imagen = String(cString: sqlite3_column_text(statement, 7))
+                    }
+                    
+                    let producto = Producto(
+                                        IdProducto: Int(sqlite3_column_int(statement, 0)),
+                                        Nombre: String(cString: sqlite3_column_text(statement, 1)),
+                                        PrecioUnitario: sqlite3_column_double(statement, 2),
+                                        Stock: Int(sqlite3_column_int(statement, 3)),
+                                        Proveedor: Proveedor(
+                                            IdProveedor: Int(sqlite3_column_int(statement, 4)),
+                                            Nombre: "",
+                                            Telefono: ""
+                                        ),
+                                        Departamento: Departamento(
+                                            IdDepartamento: Int(sqlite3_column_int(statement, 5)),
+                                            Nombre: "",
+                                            Area: Area(
+                                                IdArea: 0,
+                                                Nombre: ""
                                             )
                                         ),
                                         Descripcion: description ,

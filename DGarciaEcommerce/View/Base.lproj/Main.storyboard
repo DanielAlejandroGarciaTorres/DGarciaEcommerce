@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bBe-66-4te">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d0T-Pa-0tM">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -165,7 +165,7 @@
                             <constraint firstItem="ggR-ug-ODQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wsj-Q9-6u2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8Te-tf-fkK"/>
+                    <navigationItem key="navigationItem" style="editor" id="8Te-tf-fkK"/>
                     <connections>
                         <outlet property="ButtonOultet" destination="ggR-ug-ODQ" id="Ezn-TY-AwX"/>
                         <outlet property="Descripcion" destination="0vB-gQ-5Ls" id="eeq-dR-apo"/>
@@ -209,6 +209,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDb-ZI-DT5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="838" y="981"/>
+        </scene>
+        <!--Ventas-->
+        <scene sceneID="hb1-6B-4Gn">
+            <objects>
+                <navigationController id="TeC-JF-OBx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ventas" image="dollarsign" catalog="system" id="Npm-pC-wdD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u2Z-95-ieS">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5bS-3K-KAE" kind="relationship" relationship="rootViewController" id="Opi-yH-vpT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2j-7F-qrO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="1728"/>
+        </scene>
+        <!--Area-->
+        <scene sceneID="ohi-xc-0nC">
+            <objects>
+                <collectionViewController id="5bS-3K-KAE" customClass="AreaCollectionViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FU1-FM-Sae">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="fEu-G5-Ejn">
+                            <size key="itemSize" width="0.0" height="0.0"/>
+                            <size key="estimatedItemSize" width="160" height="160"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="5bS-3K-KAE" id="iKH-K4-Bw1"/>
+                            <outlet property="delegate" destination="5bS-3K-KAE" id="Lxq-e1-Yxv"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Area" id="R9t-yu-9cp"/>
+                    <connections>
+                        <segue destination="bAr-n2-sld" kind="show" identifier="AreaDepartamentoSegue" id="Bzm-OG-8HN"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gt5-V6-gdt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="1728"/>
+        </scene>
+        <!--Departamento View Controller-->
+        <scene sceneID="gUT-6x-W4y">
+            <objects>
+                <collectionViewController id="bAr-n2-sld" userLabel="Departamento View Controller" customClass="DepartamentoCollectionViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PtG-p8-GuD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="iBu-Br-3yb">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="estimatedItemSize" width="160" height="160"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="bAr-n2-sld" id="Wdq-a2-hS2"/>
+                            <outlet property="delegate" destination="bAr-n2-sld" id="lQv-Mp-aF6"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Departamento" style="editor" id="Ha1-YL-7SJ"/>
+                    <connections>
+                        <segue destination="QWV-S0-Pef" kind="show" identifier="DepartamentoProductoSegue" id="bLq-Pj-0IY"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oca-Pl-8CL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="1728"/>
+        </scene>
+        <!--Producto-->
+        <scene sceneID="K6U-wK-YVk">
+            <objects>
+                <collectionViewController id="QWV-S0-Pef" customClass="ProductoCollectionViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Amj-kI-yyP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="fEb-Q2-avi">
+                            <size key="itemSize" width="0.0" height="0.0"/>
+                            <size key="estimatedItemSize" width="300" height="400"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="QWV-S0-Pef" id="LKg-oq-kbH"/>
+                            <outlet property="delegate" destination="QWV-S0-Pef" id="6yn-ZK-k1I"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Producto" style="editor" id="vKO-gT-ZX1"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erb-ub-g8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2711" y="1728"/>
         </scene>
         <!--Departamento Controller-->
         <scene sceneID="R2b-lf-fBa">
@@ -264,7 +368,7 @@
                             <constraint firstItem="nfH-UL-5JY" firstAttribute="centerY" secondItem="qqm-ba-XTy" secondAttribute="centerY" id="UON-05-Wc8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7tX-YK-5HU"/>
+                    <navigationItem key="navigationItem" style="editor" id="7tX-YK-5HU"/>
                     <connections>
                         <outlet property="IdArea" destination="bMC-RB-fu4" id="Snh-dS-NKK"/>
                         <outlet property="NombreDepartamento" destination="wRw-SD-Jx3" id="9jj-5f-7aq"/>
@@ -558,6 +662,7 @@
                         <segue destination="t9i-Vl-Vow" kind="relationship" relationship="viewControllers" id="chC-il-Vo9"/>
                         <segue destination="Z1g-SJ-bYg" kind="relationship" relationship="viewControllers" id="Uxb-uZ-jbz"/>
                         <segue destination="wtt-YC-awq" kind="relationship" relationship="viewControllers" id="90L-Cv-Oqf"/>
+                        <segue destination="TeC-JF-OBx" kind="relationship" relationship="viewControllers" id="lUy-Qw-vGF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sr-7R-hiE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -916,7 +1021,7 @@
                             <constraint firstItem="A4y-6A-EMA" firstAttribute="bottom" secondItem="alt-De-ycl" secondAttribute="bottom" id="ztQ-h8-wYg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="K92-Ea-fJ0"/>
+                    <navigationItem key="navigationItem" style="editor" id="K92-Ea-fJ0"/>
                     <connections>
                         <outlet property="ApellidoMaternoField" destination="L8Q-v9-vha" id="Dcm-Wu-7Rk"/>
                         <outlet property="ApellidoPaternoField" destination="pNS-ie-abT" id="jzj-7l-78q"/>
@@ -990,6 +1095,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="dollarsign" catalog="system" width="89" height="128"/>
         <image name="fondoPrincipal" width="1080" height="2198"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
         <image name="person" catalog="system" width="128" height="121"/>

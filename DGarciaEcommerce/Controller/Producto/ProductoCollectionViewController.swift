@@ -11,6 +11,7 @@ import UIKit
 class ProductoCollectionViewController: UICollectionViewController {
     
     var idDepartamento : Int? = nil
+    var nombreProducto : String? = nil
     let productoViewModel = ProductoViewModel()
     var productos = [Producto]()
 
@@ -32,15 +33,24 @@ class ProductoCollectionViewController: UICollectionViewController {
 
     func LoadData() {
         
-        let result = productoViewModel.GetByIdDepartamento(idDepartamento: self.idDepartamento!)
+        var result = Result()
         
-        if result.Correct {
-            productos = result.Objects! as! [Producto]
-            collectionView.reloadData()
+        if nombreProducto != nil {
+            result = productoViewModel.GetByProducto(producto: self.nombreProducto!)
             
+            if result.Correct {
+                productos = result.Objects! as! [Producto]
+                collectionView.reloadData()
+            }
+            
+        } else if idDepartamento != nil{
+            result = productoViewModel.GetByIdDepartamento(idDepartamento: self.idDepartamento!)
+                    
+            if result.Correct {
+                productos = result.Objects! as! [Producto]
+                collectionView.reloadData()
+            }
         }
-        
-        
     }
     /*
     // MARK: - Navigation

@@ -45,6 +45,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Agregar" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="Action:" destination="gTV-IL-0wX" eventType="touchUpInside" id="uMy-Ip-IfP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ac-8b-ZvP" userLabel="Label2">
                                 <rect key="frame" x="10" y="300" width="280" height="30"/>

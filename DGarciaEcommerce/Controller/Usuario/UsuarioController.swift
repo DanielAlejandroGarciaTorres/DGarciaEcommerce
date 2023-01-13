@@ -48,6 +48,7 @@ class UsuarioController: UIViewController, UIImagePickerControllerDelegate, UINa
             self.ApellidoMaternoField.text = usuarioModel.ApelldioMaterno
             self.EmailField.text = usuarioModel.Email
             self.PasswordField.text = usuarioModel.password
+            self.DatePicker.date = usuarioModel.FechaNacimiento
             self.SexoField.text = usuarioModel.Sexo
             self.TelefonoField.text = usuarioModel.Telefono
             self.CelularField.text = usuarioModel.Celular

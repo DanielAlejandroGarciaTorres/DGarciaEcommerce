@@ -18,4 +18,8 @@ class ProductoCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
+    
+    @IBAction func Action(_ sender: UIButton) {
+        print("Soy la celda")
+    }
 }

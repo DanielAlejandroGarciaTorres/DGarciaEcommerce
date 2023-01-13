@@ -28,6 +28,7 @@ class UsuarioTableViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        
         LoadData()
     }
     

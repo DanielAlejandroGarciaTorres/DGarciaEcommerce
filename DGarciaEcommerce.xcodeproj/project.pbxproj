@@ -37,7 +37,6 @@
 		EF6EDAAD29676F1800ED7066 /* UsuarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EDAAC29676F1800ED7066 /* UsuarioController.swift */; };
 		EF6EDAB429676FA700ED7066 /* UsuarioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EDAB229676FA700ED7066 /* UsuarioTableViewCell.swift */; };
 		EF6EDAB529676FA700ED7066 /* UsuarioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */; };
-		EF6FD55029707ACB002C76F3 /* AreaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FD54F29707ACB002C76F3 /* AreaCollectionViewController.swift */; };
 		EF71ED80296DF39500AE4E06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF71ED7F296DF39500AE4E06 /* GoogleService-Info.plist */; };
 		EF71ED84296DF60000AE4E06 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EF71ED83296DF60000AE4E06 /* FirebaseAuth */; };
 		EF71ED86296DF60000AE4E06 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EF71ED85296DF60000AE4E06 /* FirebaseDatabase */; };
@@ -50,6 +49,7 @@
 		EF81D8A32970A46E00536325 /* ProductoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */; };
 		EF81D8A52970A5B800536325 /* ProductoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */; };
 		EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */; };
+		EFB6DE242971BDC7009279E1 /* AreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6DE232971BDC7009279E1 /* AreaController.swift */; };
 		EFCDB8FD29687FB4002C0044 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB8FC29687FB4002C0044 /* Usuario.swift */; };
 		EFCDB8FF296883E9002C0044 /* UsuarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */; };
 		EFCDB901296888D6002C0044 /* Rol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB900296888D6002C0044 /* Rol.swift */; };
@@ -90,7 +90,6 @@
 		EF6EDAAC29676F1800ED7066 /* UsuarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioController.swift; sourceTree = "<group>"; };
 		EF6EDAB229676FA700ED7066 /* UsuarioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioTableViewCell.swift; sourceTree = "<group>"; };
 		EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsuarioTableViewCell.xib; sourceTree = "<group>"; };
-		EF6FD54F29707ACB002C76F3 /* AreaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCollectionViewController.swift; sourceTree = "<group>"; };
 		EF71ED7F296DF39500AE4E06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF71ED8A296DF68800AE4E06 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		EF81D89829707BD900536325 /* GeneralCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoCollectionViewController.swift; sourceTree = "<group>"; };
 		EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
+		EFB6DE232971BDC7009279E1 /* AreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaController.swift; sourceTree = "<group>"; };
 		EFCDB8FC29687FB4002C0044 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewModel.swift; sourceTree = "<group>"; };
 		EFCDB900296888D6002C0044 /* Rol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rol.swift; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 		EF6FD54E29707AAF002C76F3 /* Area */ = {
 			isa = PBXGroup;
 			children = (
-				EF6FD54F29707ACB002C76F3 /* AreaCollectionViewController.swift */,
+				EFB6DE232971BDC7009279E1 /* AreaController.swift */,
 			);
 			path = Area;
 			sourceTree = "<group>";
@@ -430,13 +430,13 @@
 				EF0E8447295CD20700E3415B /* Result.swift in Sources */,
 				EF622145295BB72800EA5D5E /* DB.swift in Sources */,
 				EF35867C29662454004A2493 /* DepartamentoTableViewController.swift in Sources */,
+				EFB6DE242971BDC7009279E1 /* AreaController.swift in Sources */,
 				EF0E8445295CD1B100E3415B /* Area.swift in Sources */,
 				EF6EDAAD29676F1800ED7066 /* UsuarioController.swift in Sources */,
 				EF160071296F29D400BD7CAD /* CreateAcccountController.swift in Sources */,
 				EFCDB901296888D6002C0044 /* Rol.swift in Sources */,
 				EF2D144E295E69C300561FF6 /* ProductoTableViewCell.swift in Sources */,
 				EF81D8A52970A5B800536325 /* ProductoCollectionViewController.swift in Sources */,
-				EF6FD55029707ACB002C76F3 /* AreaCollectionViewController.swift in Sources */,
 				EF62212C295BB49600EA5D5E /* SceneDelegate.swift in Sources */,
 				EF0E8449295CD38E00E3415B /* ProductoViewModel.swift in Sources */,
 			);

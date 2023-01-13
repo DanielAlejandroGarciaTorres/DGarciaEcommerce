@@ -78,8 +78,8 @@
             filePath = "DGarciaEcommerce/ViewModel/ProductoViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
+            startingLineNumber = "363"
+            endingLineNumber = "363"
             landmarkName = "GetById(idProducto:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "DGarciaEcommerce/ViewModel/ProductoViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "343"
-            endingLineNumber = "343"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
             landmarkName = "GetById(idProducto:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "DGarciaEcommerce/ViewModel/ProductoViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
+            startingLineNumber = "364"
+            endingLineNumber = "364"
             landmarkName = "GetById(idProducto:)"
             landmarkType = "7">
          </BreakpointContent>

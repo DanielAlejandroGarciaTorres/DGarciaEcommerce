@@ -76,7 +76,7 @@ class DepartamentoCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GeneralCell", for: indexPath) as! GeneralCollectionViewCell
         
         cell.titleLabel.text = departamentos[indexPath.row].Nombre
-    
+        cell.imageOutlet.image = UIImage(named: departamentos[indexPath.row].Nombre)
         // Configure the cell
     
         return cell

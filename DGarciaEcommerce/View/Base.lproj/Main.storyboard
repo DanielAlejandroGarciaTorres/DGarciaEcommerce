@@ -220,40 +220,76 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="5bS-3K-KAE" kind="relationship" relationship="rootViewController" id="Opi-yH-vpT"/>
+                        <segue destination="EpP-4K-eae" kind="relationship" relationship="rootViewController" id="Bir-em-xxF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2j-7F-qrO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-28" y="1728"/>
         </scene>
-        <!--Area-->
-        <scene sceneID="ohi-xc-0nC">
+        <!--Area Controller-->
+        <scene sceneID="M4g-as-BzQ">
             <objects>
-                <collectionViewController id="5bS-3K-KAE" customClass="AreaCollectionViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FU1-FM-Sae">
+                <viewController id="EpP-4K-eae" userLabel="Area Controller" customClass="AreaController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jzY-La-Y31">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="¿Qué producto buscas?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MNu-zB-Z7o">
+                                <rect key="frame" x="20" y="111" width="258" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kUS-XA-eEE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-Zh-qbi">
+                                <rect key="frame" x="278" y="111" width="77" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dLC-eF-eme"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Buscar"/>
+                                <connections>
+                                    <action selector="BuscarProducto:" destination="EpP-4K-eae" eventType="touchUpInside" id="8r5-L8-Jrq"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aBT-OX-bJ0">
+                                <rect key="frame" x="20" y="171" width="335" height="538"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="hSg-2D-AwK">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
+                                    <size key="estimatedItemSize" width="160" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H2G-FQ-jca"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="fEu-G5-Ejn">
-                            <size key="itemSize" width="0.0" height="0.0"/>
-                            <size key="estimatedItemSize" width="160" height="160"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells/>
-                        <connections>
-                            <outlet property="dataSource" destination="5bS-3K-KAE" id="iKH-K4-Bw1"/>
-                            <outlet property="delegate" destination="5bS-3K-KAE" id="Lxq-e1-Yxv"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Area" id="R9t-yu-9cp"/>
+                        <constraints>
+                            <constraint firstItem="H2G-FQ-jca" firstAttribute="trailing" secondItem="tG4-Zh-qbi" secondAttribute="trailing" constant="20" id="EgI-Ir-b0x"/>
+                            <constraint firstItem="H2G-FQ-jca" firstAttribute="bottom" secondItem="aBT-OX-bJ0" secondAttribute="bottom" constant="20" id="Msn-fT-VUE"/>
+                            <constraint firstItem="tG4-Zh-qbi" firstAttribute="top" secondItem="H2G-FQ-jca" secondAttribute="top" constant="20" id="PAr-Wg-dcu"/>
+                            <constraint firstItem="MNu-zB-Z7o" firstAttribute="top" secondItem="H2G-FQ-jca" secondAttribute="top" constant="20" id="RNQ-cB-Qxs"/>
+                            <constraint firstItem="H2G-FQ-jca" firstAttribute="trailing" secondItem="aBT-OX-bJ0" secondAttribute="trailing" constant="20" id="VXQ-NP-XdI"/>
+                            <constraint firstItem="aBT-OX-bJ0" firstAttribute="top" secondItem="MNu-zB-Z7o" secondAttribute="bottom" constant="20" id="kyg-KD-8I4"/>
+                            <constraint firstItem="tG4-Zh-qbi" firstAttribute="leading" secondItem="MNu-zB-Z7o" secondAttribute="trailing" id="vhu-VK-Aw3"/>
+                            <constraint firstItem="aBT-OX-bJ0" firstAttribute="leading" secondItem="H2G-FQ-jca" secondAttribute="leading" constant="20" id="wUg-Z5-DjG"/>
+                            <constraint firstItem="MNu-zB-Z7o" firstAttribute="leading" secondItem="H2G-FQ-jca" secondAttribute="leading" constant="20" id="yM8-QP-ZI4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="arP-gu-uH3"/>
                     <connections>
-                        <segue destination="bAr-n2-sld" kind="show" identifier="AreaDepartamentoSegue" id="Bzm-OG-8HN"/>
+                        <outlet property="CollectionArea" destination="aBT-OX-bJ0" id="Ipl-RX-fzP"/>
+                        <outlet property="ProductoSearch" destination="MNu-zB-Z7o" id="jzC-bE-C49"/>
+                        <segue destination="QWV-S0-Pef" kind="show" identifier="AreaProductoSegue" id="V20-PY-ggt"/>
+                        <segue destination="bAr-n2-sld" kind="show" identifier="AreaDepartamentoSegue" id="l66-sf-psx"/>
                     </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gt5-V6-gdt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IWG-hJ-yZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="838" y="1728"/>
         </scene>
@@ -1091,6 +1127,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="6Lc-il-IPu"/>
         <segue reference="sa0-FQ-ZBd"/>
+        <segue reference="V20-PY-ggt"/>
         <segue reference="ah0-WG-zno"/>
     </inferredMetricsTieBreakers>
     <resources>

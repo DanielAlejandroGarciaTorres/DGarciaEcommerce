@@ -95,5 +95,7 @@ extension AreaController : UICollectionViewDelegate, UICollectionViewDataSource 
         self.idArea = areas[indexPath.row].IdArea
         self.performSegue(withIdentifier: "AreaDepartamentoSegue", sender: self)
         
+        
+        
     }
 }

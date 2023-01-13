@@ -13,13 +13,11 @@ class ProductoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var PrecioProductoLabel: UILabel!
     @IBOutlet weak var imagenProducto: UIImageView!
     
+    @IBOutlet weak var celdaButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    
-    @IBAction func Action(_ sender: UIButton) {
-        print("Soy la celda")
-    }
 }

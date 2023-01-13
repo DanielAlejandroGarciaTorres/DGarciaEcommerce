@@ -85,10 +85,20 @@ class ProductoCollectionViewController: UICollectionViewController {
             cell.imagenProducto.image = UIImage(data: imageData!)
         }
         
-        return cell
+        cell.celdaButton.tag = indexPath.row
+        cell.celdaButton.addTarget(self, action: #selector(anadirButton), for: .touchUpInside)
         // Configure the cell
     
         return cell
+    }
+    
+    @objc func anadirButton(sender: UIButton) {
+        let indexPath = IndexPath(row: sender.tag, section: 0)
+        
+        print("""
+        Seleccionste ---> \(productos[indexPath.row].Nombre)
+        Con el id ------> \(productos[indexPath.row].IdProducto)
+        """)
     }
 
     // MARK: UICollectionViewDelegate

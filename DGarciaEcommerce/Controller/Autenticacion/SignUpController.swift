@@ -16,8 +16,8 @@ class SignUpController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
-        CorreoField.text = "dgarciatorres@gmail.com"
-        Contrasenia.text = "pass@word1"
+//        CorreoField.text = "dgarciatorres@gmail.com"
+//        Contrasenia.text = "pass@word1"
         // Do any additional setup after loading the view.
     }
     

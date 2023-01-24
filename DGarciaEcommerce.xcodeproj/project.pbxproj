@@ -23,6 +23,7 @@
 		EF35867A2966124D004A2493 /* DepartamentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3586792966124D004A2493 /* DepartamentoViewModel.swift */; };
 		EF35867C29662454004A2493 /* DepartamentoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35867B29662454004A2493 /* DepartamentoTableViewController.swift */; };
 		EF35868029664FF8004A2493 /* DepartamentoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35867F29664FF8004A2493 /* DepartamentoController.swift */; };
+		EF44659F297F177200440A02 /* DetalleProductoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44659E297F177200440A02 /* DetalleProductoController.swift */; };
 		EF540BB3296E326700862398 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF540BB2296E326700862398 /* iOSDropDown.framework */; };
 		EF540BB5296E32F300862398 /* ProveedorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF540BB4296E32F300862398 /* ProveedorViewModel.swift */; };
 		EF62212A295BB49600EA5D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF622129295BB49600EA5D5E /* AppDelegate.swift */; };
@@ -50,10 +51,32 @@
 		EF81D8A52970A5B800536325 /* ProductoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */; };
 		EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */; };
 		EFB6DE242971BDC7009279E1 /* AreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6DE232971BDC7009279E1 /* AreaController.swift */; };
+		EFBCFA6D2978521200E72972 /* DGarciaEcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBCFA6C2978521200E72972 /* DGarciaEcommerceTests.swift */; };
+		EFBCFA7A2978522400E72972 /* DGarciaEcommerceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBCFA792978522400E72972 /* DGarciaEcommerceUITests.swift */; };
+		EFBCFA7C2978522400E72972 /* DGarciaEcommerceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBCFA7B2978522400E72972 /* DGarciaEcommerceUITestsLaunchTests.swift */; };
+		EFBCFA83297854F700E72972 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EFBCFA82297854F700E72972 /* FirebaseFirestore */; };
+		EFBCFA85297854FC00E72972 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EFBCFA84297854FC00E72972 /* FirebaseAuth */; };
 		EFCDB8FD29687FB4002C0044 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB8FC29687FB4002C0044 /* Usuario.swift */; };
 		EFCDB8FF296883E9002C0044 /* UsuarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */; };
 		EFCDB901296888D6002C0044 /* Rol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDB900296888D6002C0044 /* Rol.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFBCFA6E2978521200E72972 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF62211E295BB49600EA5D5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF622125295BB49600EA5D5E;
+			remoteInfo = DGarciaEcommerce;
+		};
+		EFBCFA7D2978522400E72972 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF62211E295BB49600EA5D5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF622125295BB49600EA5D5E;
+			remoteInfo = DGarciaEcommerce;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		10694476533BB5934DF50B15 /* Pods-DGarciaEcommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGarciaEcommerce.debug.xcconfig"; path = "Target Support Files/Pods-DGarciaEcommerce/Pods-DGarciaEcommerce.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +97,7 @@
 		EF3586792966124D004A2493 /* DepartamentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoViewModel.swift; sourceTree = "<group>"; };
 		EF35867B29662454004A2493 /* DepartamentoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoTableViewController.swift; sourceTree = "<group>"; };
 		EF35867F29664FF8004A2493 /* DepartamentoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoController.swift; sourceTree = "<group>"; };
+		EF44659E297F177200440A02 /* DetalleProductoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleProductoController.swift; sourceTree = "<group>"; };
 		EF540BB2296E326700862398 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF540BB4296E32F300862398 /* ProveedorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProveedorViewModel.swift; sourceTree = "<group>"; };
 		EF622126295BB49600EA5D5E /* DGarciaEcommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGarciaEcommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +124,11 @@
 		EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoCollectionViewController.swift; sourceTree = "<group>"; };
 		EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
 		EFB6DE232971BDC7009279E1 /* AreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaController.swift; sourceTree = "<group>"; };
+		EFBCFA6A2978521200E72972 /* DGarciaEcommerceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DGarciaEcommerceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBCFA6C2978521200E72972 /* DGarciaEcommerceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGarciaEcommerceTests.swift; sourceTree = "<group>"; };
+		EFBCFA772978522400E72972 /* DGarciaEcommerceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DGarciaEcommerceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBCFA792978522400E72972 /* DGarciaEcommerceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGarciaEcommerceUITests.swift; sourceTree = "<group>"; };
+		EFBCFA7B2978522400E72972 /* DGarciaEcommerceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGarciaEcommerceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EFCDB8FC29687FB4002C0044 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewModel.swift; sourceTree = "<group>"; };
 		EFCDB900296888D6002C0044 /* Rol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rol.swift; sourceTree = "<group>"; };
@@ -115,6 +144,22 @@
 				EF71ED86296DF60000AE4E06 /* FirebaseDatabase in Frameworks */,
 				A497D62073B472DD5EC80A20 /* Pods_DGarciaEcommerce.framework in Frameworks */,
 				EF71ED84296DF60000AE4E06 /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBCFA672978521200E72972 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBCFA83297854F700E72972 /* FirebaseFirestore in Frameworks */,
+				EFBCFA85297854FC00E72972 /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBCFA742978522400E72972 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				EF622128295BB49600EA5D5E /* DGarciaEcommerce */,
+				EFBCFA6B2978521200E72972 /* DGarciaEcommerceTests */,
+				EFBCFA782978522400E72972 /* DGarciaEcommerceUITests */,
 				EF622127295BB49600EA5D5E /* Products */,
 				4A64C1C3DB6179196FD59578 /* Pods */,
 				9033F0EF1231E7A35D79AA52 /* Frameworks */,
@@ -164,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				EF622126295BB49600EA5D5E /* DGarciaEcommerce.app */,
+				EFBCFA6A2978521200E72972 /* DGarciaEcommerceTests.xctest */,
+				EFBCFA772978522400E72972 /* DGarciaEcommerceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,8 +323,26 @@
 				EF2D144C295E69C300561FF6 /* ProductoTableViewCell.swift */,
 				EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */,
 				EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */,
+				EF44659E297F177200440A02 /* DetalleProductoController.swift */,
 			);
 			path = Producto;
+			sourceTree = "<group>";
+		};
+		EFBCFA6B2978521200E72972 /* DGarciaEcommerceTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFBCFA6C2978521200E72972 /* DGarciaEcommerceTests.swift */,
+			);
+			path = DGarciaEcommerceTests;
+			sourceTree = "<group>";
+		};
+		EFBCFA782978522400E72972 /* DGarciaEcommerceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFBCFA792978522400E72972 /* DGarciaEcommerceUITests.swift */,
+				EFBCFA7B2978522400E72972 /* DGarciaEcommerceUITestsLaunchTests.swift */,
+			);
+			path = DGarciaEcommerceUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +372,46 @@
 			productReference = EF622126295BB49600EA5D5E /* DGarciaEcommerce.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EFBCFA692978521200E72972 /* DGarciaEcommerceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFBCFA722978521200E72972 /* Build configuration list for PBXNativeTarget "DGarciaEcommerceTests" */;
+			buildPhases = (
+				EFBCFA662978521200E72972 /* Sources */,
+				EFBCFA672978521200E72972 /* Frameworks */,
+				EFBCFA682978521200E72972 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFBCFA6F2978521200E72972 /* PBXTargetDependency */,
+			);
+			name = DGarciaEcommerceTests;
+			packageProductDependencies = (
+				EFBCFA82297854F700E72972 /* FirebaseFirestore */,
+				EFBCFA84297854FC00E72972 /* FirebaseAuth */,
+			);
+			productName = DGarciaEcommerceTests;
+			productReference = EFBCFA6A2978521200E72972 /* DGarciaEcommerceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFBCFA762978522400E72972 /* DGarciaEcommerceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFBCFA7F2978522400E72972 /* Build configuration list for PBXNativeTarget "DGarciaEcommerceUITests" */;
+			buildPhases = (
+				EFBCFA732978522400E72972 /* Sources */,
+				EFBCFA742978522400E72972 /* Frameworks */,
+				EFBCFA752978522400E72972 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFBCFA7E2978522400E72972 /* PBXTargetDependency */,
+			);
+			name = DGarciaEcommerceUITests;
+			productName = DGarciaEcommerceUITests;
+			productReference = EFBCFA772978522400E72972 /* DGarciaEcommerceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -317,6 +424,14 @@
 				TargetAttributes = {
 					EF622125295BB49600EA5D5E = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					EFBCFA692978521200E72972 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = EF622125295BB49600EA5D5E;
+					};
+					EFBCFA762978522400E72972 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = EF622125295BB49600EA5D5E;
 					};
 				};
 			};
@@ -337,6 +452,8 @@
 			projectRoot = "";
 			targets = (
 				EF622125295BB49600EA5D5E /* DGarciaEcommerce */,
+				EFBCFA692978521200E72972 /* DGarciaEcommerceTests */,
+				EFBCFA762978522400E72972 /* DGarciaEcommerceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -355,6 +472,20 @@
 				EF622136295BB49800EA5D5E /* Assets.xcassets in Resources */,
 				EF622131295BB49600EA5D5E /* Main.storyboard in Resources */,
 				EF71ED80296DF39500AE4E06 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBCFA682978521200E72972 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBCFA752978522400E72972 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,11 +569,42 @@
 				EF2D144E295E69C300561FF6 /* ProductoTableViewCell.swift in Sources */,
 				EF81D8A52970A5B800536325 /* ProductoCollectionViewController.swift in Sources */,
 				EF62212C295BB49600EA5D5E /* SceneDelegate.swift in Sources */,
+				EF44659F297F177200440A02 /* DetalleProductoController.swift in Sources */,
 				EF0E8449295CD38E00E3415B /* ProductoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFBCFA662978521200E72972 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBCFA6D2978521200E72972 /* DGarciaEcommerceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBCFA732978522400E72972 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBCFA7A2978522400E72972 /* DGarciaEcommerceUITests.swift in Sources */,
+				EFBCFA7C2978522400E72972 /* DGarciaEcommerceUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFBCFA6F2978521200E72972 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF622125295BB49600EA5D5E /* DGarciaEcommerce */;
+			targetProxy = EFBCFA6E2978521200E72972 /* PBXContainerItemProxy */;
+		};
+		EFBCFA7E2978522400E72972 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF622125295BB49600EA5D5E /* DGarciaEcommerce */;
+			targetProxy = EFBCFA7D2978522400E72972 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EF62212F295BB49600EA5D5E /* Main.storyboard */ = {
@@ -646,6 +808,80 @@
 			};
 			name = Release;
 		};
+		EFBCFA702978521200E72972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R6B33YVR42;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digis.DGarciaEcommerceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DGarciaEcommerce.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DGarciaEcommerce";
+			};
+			name = Debug;
+		};
+		EFBCFA712978521200E72972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R6B33YVR42;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digis.DGarciaEcommerceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DGarciaEcommerce.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DGarciaEcommerce";
+			};
+			name = Release;
+		};
+		EFBCFA802978522400E72972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R6B33YVR42;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digis.DGarciaEcommerceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DGarciaEcommerce;
+			};
+			name = Debug;
+		};
+		EFBCFA812978522400E72972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R6B33YVR42;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digis.DGarciaEcommerceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DGarciaEcommerce;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -663,6 +899,24 @@
 			buildConfigurations = (
 				EF62213E295BB49800EA5D5E /* Debug */,
 				EF62213F295BB49800EA5D5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFBCFA722978521200E72972 /* Build configuration list for PBXNativeTarget "DGarciaEcommerceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBCFA702978521200E72972 /* Debug */,
+				EFBCFA712978521200E72972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFBCFA7F2978522400E72972 /* Build configuration list for PBXNativeTarget "DGarciaEcommerceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBCFA802978522400E72972 /* Debug */,
+				EFBCFA812978522400E72972 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -695,6 +949,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EF71ED82296DF60000AE4E06 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabaseSwift;
+		};
+		EFBCFA82297854F700E72972 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF71ED82296DF60000AE4E06 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		EFBCFA84297854FC00E72972 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF71ED82296DF60000AE4E06 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 

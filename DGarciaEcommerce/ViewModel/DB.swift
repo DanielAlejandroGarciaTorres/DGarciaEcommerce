@@ -22,13 +22,18 @@ class DB {
         var db : OpaquePointer? = nil
         
         if sqlite3_open(filePath.path, &db) == SQLITE_OK {
-            print("Conexion correcta")
-            print(filePath)
-            return db
-        } else {
-            print("Error")
-            return nil
+            var statement : OpaquePointer? = nil
+            if sqlite3_prepare_v2(db, "PRAGMA foreign_keys = TRUE", -1, &statement, nil) == SQLITE_OK {
+                
+                print("Conexion correcta")
+                print(filePath)
+                
+                sqlite3_finalize(statement)
+                
+                return db
+            }
         }
+        return nil
     }
     
 }

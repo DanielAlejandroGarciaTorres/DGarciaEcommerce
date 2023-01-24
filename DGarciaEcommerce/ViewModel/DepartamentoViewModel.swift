@@ -53,7 +53,13 @@ class DepartamentoViewModel{
                 sqlite3_bind_int(statement, 3, Int32(idDepartamento))
                 
                 if sqlite3_step(statement) == SQLITE_DONE {
-                    result.Correct = true
+                    print(sqlite3_changes(context.db))
+                    if sqlite3_changes(context.db) != 0 {
+                        result.Correct = true
+                    } else {
+                        result.Correct = false
+                        result.ErrorMessage = "Recurso no actualizado."
+                    }
                 } else {
                     result.Correct = false
                     result.ErrorMessage = "Recurso no actualizado."
@@ -79,7 +85,12 @@ class DepartamentoViewModel{
             if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK {
                 
                 if sqlite3_step(statement) == SQLITE_DONE {
-                    result.Correct = true
+                    if sqlite3_changes(context.db) != 0 {
+                        result.Correct = true
+                    } else {
+                        result.Correct = false
+                        result.ErrorMessage = "Recurso no eliminado."
+                    }
                 } else {
                     result.Correct = false
                     result.ErrorMessage = "Recurso no eliminado."

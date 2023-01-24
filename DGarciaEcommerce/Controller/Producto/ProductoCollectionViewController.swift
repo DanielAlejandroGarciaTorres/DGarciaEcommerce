@@ -14,6 +14,7 @@ class ProductoCollectionViewController: UICollectionViewController {
     var nombreProducto : String? = nil
     let productoViewModel = ProductoViewModel()
     var productos = [Producto]()
+    var producto : Producto? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,8 +100,21 @@ class ProductoCollectionViewController: UICollectionViewController {
         Seleccionste ---> \(productos[indexPath.row].Nombre)
         Con el id ------> \(productos[indexPath.row].IdProducto)
         """)
+        
+//        self.performSegue(withIdentifier: "DetalleProductoSegue", sender: self)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.producto = productos[indexPath.row]
+        self.performSegue(withIdentifier: "DetalleProductoSegue", sender: self)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetalleProductoSegue" {
+            let detalleProdcutoController = segue.destination as! DetalleProductoController
+            detalleProdcutoController.producto = self.producto
+        }
+    }
     // MARK: UICollectionViewDelegate
 
     /*

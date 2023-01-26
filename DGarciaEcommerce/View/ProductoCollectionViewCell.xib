@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="width" constant="280" id="WZ1-zf-9EQ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Agregar" cornerStyle="capsule"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Añadir al carrito" cornerStyle="capsule"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ac-8b-ZvP" userLabel="Label2">
                                 <rect key="frame" x="10" y="300" width="280" height="30"/>

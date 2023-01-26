@@ -281,7 +281,19 @@
                             <constraint firstItem="MNu-zB-Z7o" firstAttribute="leading" secondItem="H2G-FQ-jca" secondAttribute="leading" constant="20" id="yM8-QP-ZI4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="arP-gu-uH3"/>
+                    <navigationItem key="navigationItem" id="arP-gu-uH3">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Kkd-mp-Zy0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Pn5-rM-t92">
+                                <rect key="frame" x="276" y="5" width="83" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system"/>
+                                <connections>
+                                    <segue destination="UV5-gv-zxw" kind="show" id="nYH-L8-Q2h"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="CollectionArea" destination="aBT-OX-bJ0" id="Ipl-RX-fzP"/>
                         <outlet property="ProductoSearch" destination="MNu-zB-Z7o" id="jzC-bE-C49"/>
@@ -314,7 +326,19 @@
                             <outlet property="delegate" destination="bAr-n2-sld" id="lQv-Mp-aF6"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Departamento" style="editor" id="Ha1-YL-7SJ"/>
+                    <navigationItem key="navigationItem" title="Departamento" style="editor" id="Ha1-YL-7SJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="l1u-UM-Xe0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1rP-eB-sMZ">
+                                <rect key="frame" x="276" y="5" width="83" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system"/>
+                                <connections>
+                                    <segue destination="UV5-gv-zxw" kind="show" id="dwf-fC-RQo"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="QWV-S0-Pef" kind="show" identifier="DepartamentoProductoSegue" id="bLq-Pj-0IY"/>
                     </connections>
@@ -344,7 +368,19 @@
                             <outlet property="delegate" destination="QWV-S0-Pef" id="6yn-ZK-k1I"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Producto" style="editor" id="vKO-gT-ZX1"/>
+                    <navigationItem key="navigationItem" title="Producto" style="editor" id="vKO-gT-ZX1">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="n7g-2Q-eCk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QN5-K5-gN3">
+                                <rect key="frame" x="276" y="5" width="83" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system"/>
+                                <connections>
+                                    <segue destination="UV5-gv-zxw" kind="show" id="3eu-Z9-Uly"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="lCY-3S-Owz" kind="showDetail" identifier="DetalleProductoSegue" id="YOK-y0-MRU"/>
                     </connections>
@@ -352,6 +388,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erb-ub-g8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2711" y="1728"/>
+        </scene>
+        <!--Carrito Compras Controller-->
+        <scene sceneID="dNM-3b-REO">
+            <objects>
+                <viewController id="UV5-gv-zxw" userLabel="Carrito Compras Controller" customClass="CarritoComprasController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sk8-ZR-220">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BPb-5V-Bbn">
+                                <rect key="frame" x="30" y="111" width="315" height="482"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLt-kU-OVK">
+                                <rect key="frame" x="30" y="659" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BlM-U1-B81"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="COMPRAR" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ComprarAction:" destination="UV5-gv-zxw" eventType="touchUpInside" id="VnC-V9-07e"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total $XXXX.XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-dk-K5l">
+                                <rect key="frame" x="30" y="613" width="315" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sdd-JN-Btd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sdd-JN-Btd" firstAttribute="trailing" secondItem="BPb-5V-Bbn" secondAttribute="trailing" constant="30" id="3S7-ZO-hvy"/>
+                            <constraint firstItem="bLt-kU-OVK" firstAttribute="top" secondItem="gWa-dk-K5l" secondAttribute="bottom" constant="10" id="8u9-jM-S5E"/>
+                            <constraint firstItem="BPb-5V-Bbn" firstAttribute="leading" secondItem="sdd-JN-Btd" secondAttribute="leading" constant="30" id="ARq-sJ-ZDa"/>
+                            <constraint firstItem="sdd-JN-Btd" firstAttribute="trailing" secondItem="bLt-kU-OVK" secondAttribute="trailing" constant="30" id="T2i-cw-DIz"/>
+                            <constraint firstItem="gWa-dk-K5l" firstAttribute="leading" secondItem="sdd-JN-Btd" secondAttribute="leading" constant="30" id="XTq-Nf-Egu"/>
+                            <constraint firstItem="gWa-dk-K5l" firstAttribute="top" secondItem="BPb-5V-Bbn" secondAttribute="bottom" constant="20" id="bKS-1a-TIG"/>
+                            <constraint firstItem="sdd-JN-Btd" firstAttribute="trailing" secondItem="gWa-dk-K5l" secondAttribute="trailing" constant="30" id="hbb-Re-3fW"/>
+                            <constraint firstItem="bLt-kU-OVK" firstAttribute="leading" secondItem="sdd-JN-Btd" secondAttribute="leading" constant="30" id="liv-hX-g3N"/>
+                            <constraint firstItem="sdd-JN-Btd" firstAttribute="bottom" secondItem="bLt-kU-OVK" secondAttribute="bottom" constant="20" id="muO-sA-be3"/>
+                            <constraint firstItem="BPb-5V-Bbn" firstAttribute="top" secondItem="sdd-JN-Btd" secondAttribute="top" constant="20" id="pJt-iA-GVg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Carrito de compras" style="editor" id="8FK-yZ-kCe"/>
+                    <connections>
+                        <outlet property="tableProductos" destination="BPb-5V-Bbn" id="7O6-IS-1ep"/>
+                        <outlet property="totalLabel" destination="gWa-dk-K5l" id="2CJ-3M-DId"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lss-pi-Upi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3665" y="2472"/>
         </scene>
         <!--Detalle Producto Controller-->
         <scene sceneID="8NM-cV-gH4">
@@ -1287,11 +1381,13 @@
     <inferredMetricsTieBreakers>
         <segue reference="6Lc-il-IPu"/>
         <segue reference="sa0-FQ-ZBd"/>
+        <segue reference="nYH-L8-Q2h"/>
         <segue reference="V20-PY-ggt"/>
         <segue reference="ah0-WG-zno"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="dollarsign" catalog="system" width="89" height="128"/>
         <image name="fondoPrincipal" width="1080" height="2198"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>

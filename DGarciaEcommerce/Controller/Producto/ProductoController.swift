@@ -244,18 +244,7 @@ class ProductoController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             if result.Correct {
                 let alert = UIAlertController(title: "Confirmación", message: "Producto actualizado.", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
-                    self.NombreProducto.text = ""
-                    self.PrecioUnitario.text = ""
-                    self.Stock.text = ""
-                    self.IdProveedor.text = ""
-                    self.IdArea.text = ""
-                    self.IdDepartamento.text = ""
-                    self.Descripcion.text = ""
-                    self.imageView.image = UIImage(systemName: "photo")
-                    self.IdDepartamento.optionArray = [String]()
-                    self.IdDepartamento.optionIds = [Int]()
-                })
+                let ok = UIAlertAction(title: "OK", style: .default)
                 alert.addAction(ok)
                 self.present(alert, animated: true)
             } else {

@@ -43,12 +43,17 @@
 		EF71ED86296DF60000AE4E06 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EF71ED85296DF60000AE4E06 /* FirebaseDatabase */; };
 		EF71ED88296DF60000AE4E06 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EF71ED87296DF60000AE4E06 /* FirebaseDatabaseSwift */; };
 		EF71ED8B296DF68800AE4E06 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71ED8A296DF68800AE4E06 /* SignUpController.swift */; };
+		EF74EF3529803EAD00242723 /* VentaProductoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74EF3429803EAD00242723 /* VentaProductoViewModel.swift */; };
+		EF74EF372980461000242723 /* VentaProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74EF362980461000242723 /* VentaProducto.swift */; };
 		EF81D89A29707BD900536325 /* GeneralCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D89829707BD900536325 /* GeneralCollectionViewCell.swift */; };
 		EF81D89B29707BD900536325 /* GeneralCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF81D89929707BD900536325 /* GeneralCollectionViewCell.xib */; };
 		EF81D89D2970953400536325 /* DepartamentoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D89C2970953400536325 /* DepartamentoCollectionViewController.swift */; };
 		EF81D8A129709E8000536325 /* ProductoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF81D89F29709E8000536325 /* ProductoCollectionViewCell.xib */; };
 		EF81D8A32970A46E00536325 /* ProductoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */; };
 		EF81D8A52970A5B800536325 /* ProductoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */; };
+		EFACBD03298190F600AAEF68 /* CarritoComprasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFACBD01298190F600AAEF68 /* CarritoComprasTableViewCell.xib */; };
+		EFACBD052981913E00AAEF68 /* CarritoComprasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFACBD042981913E00AAEF68 /* CarritoComprasController.swift */; };
+		EFACBD072981972900AAEF68 /* CarritoComprasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFACBD062981972900AAEF68 /* CarritoComprasTableViewCell.swift */; };
 		EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */; };
 		EFB6DE242971BDC7009279E1 /* AreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6DE232971BDC7009279E1 /* AreaController.swift */; };
 		EFBCFA6D2978521200E72972 /* DGarciaEcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBCFA6C2978521200E72972 /* DGarciaEcommerceTests.swift */; };
@@ -116,12 +121,17 @@
 		EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsuarioTableViewCell.xib; sourceTree = "<group>"; };
 		EF71ED7F296DF39500AE4E06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF71ED8A296DF68800AE4E06 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		EF74EF3429803EAD00242723 /* VentaProductoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentaProductoViewModel.swift; sourceTree = "<group>"; };
+		EF74EF362980461000242723 /* VentaProducto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentaProducto.swift; sourceTree = "<group>"; };
 		EF81D89829707BD900536325 /* GeneralCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF81D89929707BD900536325 /* GeneralCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GeneralCollectionViewCell.xib; path = ../GeneralCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF81D89C2970953400536325 /* DepartamentoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoCollectionViewController.swift; sourceTree = "<group>"; };
 		EF81D89F29709E8000536325 /* ProductoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductoCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoCollectionViewController.swift; sourceTree = "<group>"; };
+		EFACBD01298190F600AAEF68 /* CarritoComprasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarritoComprasTableViewCell.xib; sourceTree = "<group>"; };
+		EFACBD042981913E00AAEF68 /* CarritoComprasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoComprasController.swift; sourceTree = "<group>"; };
+		EFACBD062981972900AAEF68 /* CarritoComprasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoComprasTableViewCell.swift; sourceTree = "<group>"; };
 		EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
 		EFB6DE232971BDC7009279E1 /* AreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaController.swift; sourceTree = "<group>"; };
 		EFBCFA6A2978521200E72972 /* DGarciaEcommerceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DGarciaEcommerceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +254,7 @@
 				EF0E8446295CD20700E3415B /* Result.swift */,
 				EFCDB8FC29687FB4002C0044 /* Usuario.swift */,
 				EFCDB900296888D6002C0044 /* Rol.swift */,
+				EF74EF362980461000242723 /* VentaProducto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +268,7 @@
 				EFCDB8FE296883E9002C0044 /* UsuarioViewModel.swift */,
 				EF540BB4296E32F300862398 /* ProveedorViewModel.swift */,
 				EF160076296F473A00BD7CAD /* AreaViewModel.swift */,
+				EF74EF3429803EAD00242723 /* VentaProductoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 				EF6EDAB329676FA700ED7066 /* UsuarioTableViewCell.xib */,
 				EF81D89929707BD900536325 /* GeneralCollectionViewCell.xib */,
 				EF81D89F29709E8000536325 /* ProductoCollectionViewCell.xib */,
+				EFACBD01298190F600AAEF68 /* CarritoComprasTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,15 +328,25 @@
 			path = Autenticacion;
 			sourceTree = "<group>";
 		};
+		EF74EF3329803E2000242723 /* Venta */ = {
+			isa = PBXGroup;
+			children = (
+				EF44659E297F177200440A02 /* DetalleProductoController.swift */,
+				EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */,
+				EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */,
+				EFACBD042981913E00AAEF68 /* CarritoComprasController.swift */,
+				EFACBD062981972900AAEF68 /* CarritoComprasTableViewCell.swift */,
+			);
+			path = Venta;
+			sourceTree = "<group>";
+		};
 		EFB5EFF5295E68ED009B1802 /* Producto */ = {
 			isa = PBXGroup;
 			children = (
+				EF74EF3329803E2000242723 /* Venta */,
 				EFB5EFF1295E683E009B1802 /* GetAllTableViewController.swift */,
 				EF62212D295BB49600EA5D5E /* ProductoController.swift */,
 				EF2D144C295E69C300561FF6 /* ProductoTableViewCell.swift */,
-				EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */,
-				EF81D8A42970A5B800536325 /* ProductoCollectionViewController.swift */,
-				EF44659E297F177200440A02 /* DetalleProductoController.swift */,
 			);
 			path = Producto;
 			sourceTree = "<group>";
@@ -465,6 +488,7 @@
 			files = (
 				EF6EDAB529676FA700ED7066 /* UsuarioTableViewCell.xib in Resources */,
 				EF35867529660DF2004A2493 /* DepartamentoTableViewCell.xib in Resources */,
+				EFACBD03298190F600AAEF68 /* CarritoComprasTableViewCell.xib in Resources */,
 				EF81D8A129709E8000536325 /* ProductoCollectionViewCell.xib in Resources */,
 				EF622139295BB49800EA5D5E /* LaunchScreen.storyboard in Resources */,
 				EF81D89B29707BD900536325 /* GeneralCollectionViewCell.xib in Resources */,
@@ -540,10 +564,13 @@
 			files = (
 				EF622134295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld in Sources */,
 				EF35868029664FF8004A2493 /* DepartamentoController.swift in Sources */,
+				EFACBD072981972900AAEF68 /* CarritoComprasTableViewCell.swift in Sources */,
 				EF81D89D2970953400536325 /* DepartamentoCollectionViewController.swift in Sources */,
+				EF74EF3529803EAD00242723 /* VentaProductoViewModel.swift in Sources */,
 				EF81D89A29707BD900536325 /* GeneralCollectionViewCell.swift in Sources */,
 				EFCDB8FD29687FB4002C0044 /* Usuario.swift in Sources */,
 				EF540BB5296E32F300862398 /* ProveedorViewModel.swift in Sources */,
+				EFACBD052981913E00AAEF68 /* CarritoComprasController.swift in Sources */,
 				EFCDB8FF296883E9002C0044 /* UsuarioViewModel.swift in Sources */,
 				EF35867429660DF2004A2493 /* DepartamentoTableViewCell.swift in Sources */,
 				EF160077296F473A00BD7CAD /* AreaViewModel.swift in Sources */,
@@ -551,6 +578,7 @@
 				EF6EDAB429676FA700ED7066 /* UsuarioTableViewCell.swift in Sources */,
 				EF62212E295BB49600EA5D5E /* ProductoController.swift in Sources */,
 				EF62212A295BB49600EA5D5E /* AppDelegate.swift in Sources */,
+				EF74EF372980461000242723 /* VentaProducto.swift in Sources */,
 				EF81D8A32970A46E00536325 /* ProductoCollectionViewCell.swift in Sources */,
 				EF0E8441295CD0E800E3415B /* Proveedor.swift in Sources */,
 				EF35867A2966124D004A2493 /* DepartamentoViewModel.swift in Sources */,

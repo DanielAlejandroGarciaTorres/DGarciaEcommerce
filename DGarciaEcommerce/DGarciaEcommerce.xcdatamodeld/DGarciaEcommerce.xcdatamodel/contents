@@ -25,4 +25,8 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="VentaProducto" representedClassName="VentaProducto" syncable="YES">
+        <attribute name="cantidad" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="idProducto" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
 </model>

@@ -68,7 +68,6 @@ class UsuarioViewModel {
             usuarios[posicionUsuario].setValue(usuario.ApelldioMaterno, forKey: "apellidoMaterno")
             usuarios[posicionUsuario].setValue(usuario.Email, forKey: "email")
             usuarios[posicionUsuario].setValue(usuario.password, forKey: "password")
-            print(usuario.FechaNacimiento)
             usuarios[posicionUsuario].setValue(usuario.FechaNacimiento, forKey: "fechaNacimiento")
             usuarios[posicionUsuario].setValue(usuario.Sexo, forKey: "sexo")
             usuarios[posicionUsuario].setValue(usuario.Telefono, forKey: "telefono")

@@ -101,6 +101,18 @@ class ProductoCollectionViewController: UICollectionViewController {
         Con el id ------> \(productos[indexPath.row].IdProducto)
         """)
         
+        if VentaProductoViewModel().Add(idProducto: productos[indexPath.row].IdProducto, cantidad: 1).Correct {
+            let alert = UIAlertController(title: "Confirmación", message: "Producto añadido al carrito.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(ok)
+            self.present(alert, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "No fue posible añadir el producto, intente más tarde.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(ok)
+            self.present(alert, animated: true)
+        }
+        
 //        self.performSegue(withIdentifier: "DetalleProductoSegue", sender: self)
     }
     

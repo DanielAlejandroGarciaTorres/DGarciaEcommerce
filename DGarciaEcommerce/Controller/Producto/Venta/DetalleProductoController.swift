@@ -15,8 +15,11 @@ class DetalleProductoController: UIViewController {
     @IBOutlet weak var DescripcionLabel: UILabel!
     @IBOutlet weak var ProveedorLabel: UILabel!
     @IBOutlet weak var CatidadProductoField: UITextField!
+    @IBOutlet weak var productQuantityLabel: UILabel!
+    @IBOutlet weak var anadirCarritoOutlet: UIButton!
     
     var producto: Producto? = nil
+    var cantidad: Int? = nil
     let ventaProductoViewModel = VentaProductoViewModel()
     
     override func viewDidLoad() {
@@ -26,12 +29,18 @@ class DetalleProductoController: UIViewController {
     }
     
     func LoadData() {
+        if cantidad != nil {
+            productQuantityLabel.text = "Cantidad: \(cantidad!)"
+            CatidadProductoField.isHidden = true
+            anadirCarritoOutlet.isHidden = true
+        }
+            
         NombreProductoLabel.text = producto!.Nombre
         if producto?.Imagen != "" && producto?.Imagen != nil{
             let imageData = Data(base64Encoded: producto!.Imagen!, options: .ignoreUnknownCharacters)
             ProductoImage.image = UIImage(data: imageData!)
         }
-        PrecioLabel.text = String(producto!.PrecioUnitario)
+        PrecioLabel.text = "$ \(producto!.PrecioUnitario)"
         ProveedorLabel.text = "test"
         if producto?.Descripcion != "" && producto?.Descripcion != nil {
             DescripcionLabel.text = producto!.Descripcion
@@ -68,6 +77,7 @@ class DetalleProductoController: UIViewController {
     }
     
     @IBAction func Comprar(_ sender: Any) {
+        
     }
     /*
     // MARK: - Navigation

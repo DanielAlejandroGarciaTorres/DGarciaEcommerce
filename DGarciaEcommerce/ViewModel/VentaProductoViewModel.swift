@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 import UIKit
+import SQLite3
 
 class VentaProductoViewModel {
     
@@ -127,6 +128,43 @@ class VentaProductoViewModel {
                 result.Objects?.append(productoRecupera)
             }
             result.Correct = true
+            
+        } catch let error {
+            result.Correct = false
+            result.Ex = error
+            result.ErrorMessage = error.localizedDescription
+        }
+        
+        return result
+    }
+    
+    func GetAllMetodoPago() -> Result {
+        var result = Result()
+        
+        let context = DB.init()
+        
+        let query = """
+                    SELECT
+                    IdMetodoPago,
+                    Metodo
+                    FROM MetodoPago
+                    """
+        var statement : OpaquePointer? = nil
+        
+        do{
+            if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK {
+                
+                result.Objects = []
+                while(sqlite3_step(statement) == SQLITE_ROW) {
+                    let metodoPago = MetodoPago(
+                        idMetodoPago: Int(sqlite3_column_int(statement, 0)),
+                        Metodo: String(cString: sqlite3_column_text(statement, 1))
+                    )
+                    
+                    result.Objects?.append(metodoPago)
+                }
+                result.Correct = true
+            }
             
         } catch let error {
             result.Correct = false

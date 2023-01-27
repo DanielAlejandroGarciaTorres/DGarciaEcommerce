@@ -16,6 +16,8 @@
 		EF0E8449295CD38E00E3415B /* ProductoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E8448295CD38E00E3415B /* ProductoViewModel.swift */; };
 		EF160071296F29D400BD7CAD /* CreateAcccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF160070296F29D400BD7CAD /* CreateAcccountController.swift */; };
 		EF160077296F473A00BD7CAD /* AreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF160076296F473A00BD7CAD /* AreaViewModel.swift */; };
+		EF1CC2E529832249000D6455 /* PagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1CC2E429832249000D6455 /* PagoViewController.swift */; };
+		EF1CC2E729832BBA000D6455 /* MetodoPago.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1CC2E629832BBA000D6455 /* MetodoPago.swift */; };
 		EF2D144E295E69C300561FF6 /* ProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D144C295E69C300561FF6 /* ProductoTableViewCell.swift */; };
 		EF2D144F295E69C300561FF6 /* ProductoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF2D144D295E69C300561FF6 /* ProductoTableViewCell.xib */; };
 		EF35867429660DF2004A2493 /* DepartamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35867229660DF2004A2493 /* DepartamentoTableViewCell.swift */; };
@@ -95,6 +97,8 @@
 		EF0E8448295CD38E00E3415B /* ProductoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoViewModel.swift; sourceTree = "<group>"; };
 		EF160070296F29D400BD7CAD /* CreateAcccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcccountController.swift; sourceTree = "<group>"; };
 		EF160076296F473A00BD7CAD /* AreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewModel.swift; sourceTree = "<group>"; };
+		EF1CC2E429832249000D6455 /* PagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoViewController.swift; sourceTree = "<group>"; };
+		EF1CC2E629832BBA000D6455 /* MetodoPago.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetodoPago.swift; sourceTree = "<group>"; };
 		EF2D144C295E69C300561FF6 /* ProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductoTableViewCell.swift; path = ../../ProductoTableViewCell.swift; sourceTree = "<group>"; };
 		EF2D144D295E69C300561FF6 /* ProductoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProductoTableViewCell.xib; path = ../ProductoTableViewCell.xib; sourceTree = "<group>"; };
 		EF35867229660DF2004A2493 /* DepartamentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoTableViewCell.swift; sourceTree = "<group>"; };
@@ -255,6 +259,7 @@
 				EFCDB8FC29687FB4002C0044 /* Usuario.swift */,
 				EFCDB900296888D6002C0044 /* Rol.swift */,
 				EF74EF362980461000242723 /* VentaProducto.swift */,
+				EF1CC2E629832BBA000D6455 /* MetodoPago.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				EF81D8A22970A46E00536325 /* ProductoCollectionViewCell.swift */,
 				EFACBD042981913E00AAEF68 /* CarritoComprasController.swift */,
 				EFACBD062981972900AAEF68 /* CarritoComprasTableViewCell.swift */,
+				EF1CC2E429832249000D6455 /* PagoViewController.swift */,
 			);
 			path = Venta;
 			sourceTree = "<group>";
@@ -564,6 +570,7 @@
 			files = (
 				EF622134295BB49600EA5D5E /* DGarciaEcommerce.xcdatamodeld in Sources */,
 				EF35868029664FF8004A2493 /* DepartamentoController.swift in Sources */,
+				EF1CC2E729832BBA000D6455 /* MetodoPago.swift in Sources */,
 				EFACBD072981972900AAEF68 /* CarritoComprasTableViewCell.swift in Sources */,
 				EF81D89D2970953400536325 /* DepartamentoCollectionViewController.swift in Sources */,
 				EF74EF3529803EAD00242723 /* VentaProductoViewModel.swift in Sources */,
@@ -585,6 +592,7 @@
 				EF71ED8B296DF68800AE4E06 /* SignUpController.swift in Sources */,
 				EF0E843F295CCFB300E3415B /* Producto.swift in Sources */,
 				EFB5EFF3295E683E009B1802 /* GetAllTableViewController.swift in Sources */,
+				EF1CC2E529832249000D6455 /* PagoViewController.swift in Sources */,
 				EF6EDAAB29676ECB00ED7066 /* UsuarioTableViewController.swift in Sources */,
 				EF0E8447295CD20700E3415B /* Result.swift in Sources */,
 				EF622145295BB72800EA5D5E /* DB.swift in Sources */,

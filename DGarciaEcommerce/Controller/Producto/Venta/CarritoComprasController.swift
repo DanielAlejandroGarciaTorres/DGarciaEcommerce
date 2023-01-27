@@ -38,8 +38,6 @@ class CarritoComprasController: UIViewController {
         }
     }
 
-    @IBAction func ComprarAction(_ sender: Any) {
-    }
     /*
     // MARK: - Navigation
 
@@ -86,6 +84,21 @@ extension CarritoComprasController : UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.posicionProducto = indexPath.row
+        self.performSegue(withIdentifier: "ShowDetailProducto", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailProducto" {
+            let detalleProductoController = segue.destination as! DetalleProductoController
+            detalleProductoController.cantidad = productosVenta[posicionProducto].cantidad
+            detalleProductoController.producto = productosVenta[posicionProducto].producto
+        } else if segue.identifier == "pagoSegue" {
+            let pagoViewController = segue.destination as! PagoViewController
+            pagoViewController.total = total
+        }
+    }
 }
 
 extension CarritoComprasController : SwipeTableViewCellDelegate {

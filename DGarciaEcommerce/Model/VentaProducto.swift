@@ -11,6 +11,5 @@ struct VentaProducto {
     var idVentaProducto : Int
     var producto : Producto
     var cantidad : Int
-    
     //var totalVenta : Double
 }

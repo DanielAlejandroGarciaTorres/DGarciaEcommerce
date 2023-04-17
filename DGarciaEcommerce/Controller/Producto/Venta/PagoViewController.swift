@@ -44,7 +44,26 @@ class PagoViewController: UIViewController {
         }
     }
     @IBAction func ConfirmacionPago(_ sender: Any) {
+        if MetodoPago.text == "" {
+            let alert = UIAlertController(title: "Rechazado", message: "Selecciona tui método de pago.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
+                return
+            })
+            alert.addAction(ok)
+            self.present(alert, animated: true)
         
+        }
+        
+        if (VentaProductoViewModel().AddVentaRealizada(total: total, metodoPago: MetodoPago.optionIds![MetodoPago.selectedIndex!])).Correct {
+            if VentaProductoViewModel().DeleteAll().Correct {
+                let alert = UIAlertController(title: "Confirmación", message: "Compra terminada.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
+                    self.navigationController?.popViewController(animated: true)
+                })
+                alert.addAction(ok)
+                self.present(alert, animated: true)
+            }
+        }
     }
     
     /*

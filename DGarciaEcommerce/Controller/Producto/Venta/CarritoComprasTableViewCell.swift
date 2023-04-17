@@ -14,6 +14,7 @@ class CarritoComprasTableViewCell: SwipeTableViewCell {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productQuntity: UILabel!
     @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var StepperRow: UIStepper!
     
     override func awakeFromNib() {
         super.awakeFromNib()

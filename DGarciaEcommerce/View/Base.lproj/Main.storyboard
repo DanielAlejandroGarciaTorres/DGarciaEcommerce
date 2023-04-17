@@ -182,6 +182,86 @@
             </objects>
             <point key="canvasLocation" x="1814" y="272"/>
         </scene>
+        <!--Controller-->
+        <scene sceneID="VWN-HY-VaD">
+            <objects>
+                <viewController id="D2Z-b6-2T2" customClass="PDFController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QKK-n6-Vdr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jRo-5R-Jgr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tz3-bX-zWh"/>
+                    <connections>
+                        <segue destination="SwR-78-9Ot" kind="show" identifier="pdfViewer" id="txn-jN-fAZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6q-M8-T3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-108" y="-4730"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jmz-U3-DDT">
+            <objects>
+                <navigationController id="6T0-8h-Dan" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D9u-ER-hTT">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="D2Z-b6-2T2" kind="relationship" relationship="rootViewController" id="5X9-6e-CAU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="597-Rs-4qQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1038" y="-4731"/>
+        </scene>
+        <!--Preview Controller-->
+        <scene sceneID="1mv-8Q-pCA">
+            <objects>
+                <viewController id="SwR-78-9Ot" customClass="PDFPreviewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pcr-AY-Ukw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ab-v9-s7a">
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="AFh-bR-Bfa">
+                                        <connections>
+                                            <action selector="Share:" destination="SwR-78-9Ot" id="DxH-Sa-Gdn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bR-V6-Bor" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="91" width="375" height="638"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wfv-sE-GLK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wfv-sE-GLK" firstAttribute="trailing" secondItem="7bR-V6-Bor" secondAttribute="trailing" id="bIt-kn-RPH"/>
+                            <constraint firstAttribute="trailing" secondItem="5Ab-v9-s7a" secondAttribute="trailing" id="gyK-5M-sfL"/>
+                            <constraint firstItem="Wfv-sE-GLK" firstAttribute="bottom" secondItem="5Ab-v9-s7a" secondAttribute="bottom" id="pUA-57-dId"/>
+                            <constraint firstItem="5Ab-v9-s7a" firstAttribute="top" secondItem="7bR-V6-Bor" secondAttribute="bottom" id="q7L-Xz-8ka"/>
+                            <constraint firstItem="7bR-V6-Bor" firstAttribute="leading" secondItem="Wfv-sE-GLK" secondAttribute="leading" id="sl4-T8-fYg"/>
+                            <constraint firstItem="5Ab-v9-s7a" firstAttribute="leading" secondItem="Wfv-sE-GLK" secondAttribute="leading" id="wMP-lq-WrL"/>
+                            <constraint firstItem="7bR-V6-Bor" firstAttribute="top" secondItem="Wfv-sE-GLK" secondAttribute="top" id="yfL-rQ-DZV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gys-GU-if0"/>
+                    <connections>
+                        <outlet property="pdfView" destination="7bR-V6-Bor" id="Ww8-du-cZR"/>
+                        <outlet property="sharedButton" destination="AFh-bR-Bfa" id="kLn-tM-qAW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kjq-Jg-hGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="-4731"/>
+        </scene>
         <!--Departamento-->
         <scene sceneID="qoa-OY-LX1">
             <objects>
@@ -446,7 +526,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lss-pi-Upi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710" y="2467"/>
+            <point key="canvasLocation" x="2710" y="2458"/>
+        </scene>
+        <!--Stripe Controller-->
+        <scene sceneID="Xwp-Jz-M4e">
+            <objects>
+                <viewController id="OUK-LK-Ofa" customClass="StripeController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xT3-K2-Q5C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="l6e-o2-ETg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DoO-TQ-iBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3665" y="3165"/>
         </scene>
         <!--Pago View Controller-->
         <scene sceneID="7I2-wr-UHz">
@@ -543,7 +638,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1Z-Qi-suD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3664.8000000000002" y="2466.5024630541875"/>
+            <point key="canvasLocation" x="3665" y="2458"/>
         </scene>
         <!--Detalle Producto Controller-->
         <scene sceneID="8NM-cV-gH4">
@@ -1045,6 +1140,7 @@
                         <segue destination="Z1g-SJ-bYg" kind="relationship" relationship="viewControllers" id="Uxb-uZ-jbz"/>
                         <segue destination="wtt-YC-awq" kind="relationship" relationship="viewControllers" id="90L-Cv-Oqf"/>
                         <segue destination="TeC-JF-OBx" kind="relationship" relationship="viewControllers" id="lUy-Qw-vGF"/>
+                        <segue destination="fVP-DD-VRA" kind="relationship" relationship="viewControllers" id="Yy3-Nb-XC3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sr-7R-hiE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1087,6 +1183,110 @@
             </objects>
             <point key="canvasLocation" x="-28" y="272"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i59-qQ-Us9">
+            <objects>
+                <navigationController id="eIx-9m-Aa4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HIx-Re-vLA">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eCL-ye-olX" kind="relationship" relationship="rootViewController" id="pLJ-R7-N68"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oe2-CB-gFt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-108" y="-3842"/>
+        </scene>
+        <!--Programmatically User View Controller-->
+        <scene sceneID="2Mf-m6-kxO">
+            <objects>
+                <viewController id="eCL-ye-olX" customClass="ProgrammaticallyUserViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XJL-wg-Als">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bcS-2d-gGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="axa-Kt-LM9"/>
+                    <connections>
+                        <segue destination="qkq-V8-wxg" kind="show" identifier="UpdateSegueUser" id="9tW-u7-06N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="is5-jQ-vPI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="-3842"/>
+        </scene>
+        <!--Programatically Update View Controller-->
+        <scene sceneID="jJc-rQ-aLx">
+            <objects>
+                <viewController id="qkq-V8-wxg" customClass="ProgramaticallyUpdateViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWW-za-Uzf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2Pk-bz-8QH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gfH-zw-Y5V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tld-f5-D4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="-3842"/>
+        </scene>
+        <!--Sucursal View Controller-->
+        <scene sceneID="fk4-JZ-dlT">
+            <objects>
+                <tableViewController id="mea-xY-ens" userLabel="Sucursal View Controller" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="vQo-oV-Zuo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="mea-xY-ens" id="nw5-Yp-TiE"/>
+                            <outlet property="delegate" destination="mea-xY-ens" id="FqZ-sa-fKv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sucursal" id="1id-VX-LlH">
+                        <barButtonItem key="rightBarButtonItem" image="line.3.horizontal" catalog="system" style="plain" id="rnX-pH-5Pq"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ni0-Qy-BAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="-1193"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5NK-7l-FoL">
+            <objects>
+                <viewController id="CV5-Y2-X3a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fgX-Jt-alv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ahF-Fr-thk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNe-b9-0wN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="-1193"/>
+        </scene>
+        <!--Sucursal-->
+        <scene sceneID="Mxm-XZ-kaP">
+            <objects>
+                <navigationController id="fVP-DD-VRA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sucursal" selectedImage="building.2" catalog="system" id="MBo-TP-PAA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yL0-gT-yCl">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mea-xY-ens" kind="relationship" relationship="rootViewController" id="iFW-c1-1We"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfX-sV-gJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="-1193"/>
+        </scene>
         <!--Usuario View Controller-->
         <scene sceneID="yuL-tF-c8g">
             <objects>
@@ -1114,6 +1314,160 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ken-61-L2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="838" y="-464"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7DJ-cf-YTI">
+            <objects>
+                <navigationController id="b8B-jb-MUG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AaC-dv-32T">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wpY-Ov-D96" kind="relationship" relationship="rootViewController" id="FrR-EX-rMg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XK1-Ex-J6I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="-3033"/>
+        </scene>
+        <!--Programmatic Area View Controller-->
+        <scene sceneID="G7M-zn-f6F">
+            <objects>
+                <viewController id="wpY-Ov-D96" customClass="ProgrammaticAreaViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cb9-43-Ewg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mif-Cf-Bzr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sq8-US-ju8"/>
+                    <connections>
+                        <segue destination="56b-A6-feM" kind="show" identifier="areaToDepartment" id="Dr6-4o-5Od"/>
+                        <segue destination="pCX-35-VWy" kind="show" identifier="searchProduct" id="abi-Ch-d0I"/>
+                        <segue destination="SET-0D-QWz" kind="show" identifier="buyTapped" id="dxl-Ng-2z7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G92-T4-KbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="-3033"/>
+        </scene>
+        <!--Programmatically Department View Controller-->
+        <scene sceneID="jfe-k9-oOI">
+            <objects>
+                <viewController id="56b-A6-feM" customClass="ProgrammaticallyDepartmentViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y70-3n-oH4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BP5-ny-8EH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="75E-8O-VSw"/>
+                    <connections>
+                        <segue destination="pCX-35-VWy" kind="show" identifier="departamentToProduct" id="7O5-oB-4g9"/>
+                        <segue destination="SET-0D-QWz" kind="show" identifier="buyTapped" id="irz-w3-rzv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USe-j5-ix9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="-3033"/>
+        </scene>
+        <!--Programmatically Venta View Controller-->
+        <scene sceneID="BtU-8N-q4V">
+            <objects>
+                <viewController id="SET-0D-QWz" customClass="ProgrammaticallyVentaViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B7A-tJ-5p2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RDc-pL-cv4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t95-hq-x93"/>
+                    <connections>
+                        <segue destination="7k5-GZ-hMu" kind="show" id="REb-w0-dkP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyF-mi-WT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="-2291"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cKh-L6-NLl">
+            <objects>
+                <viewController id="5fj-QV-Gny" customClass="PDFViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gd1-F4-CDq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRa-8i-pag">
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="1D6-Md-IzR">
+                                        <connections>
+                                            <action selector="Share:" destination="5fj-QV-Gny" id="A82-TN-o8K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osZ-52-O7D" customClass="PDFView">
+                                <rect key="frame" x="10" y="57" width="355" height="662"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lrk-qW-HH0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yRa-8i-pag" firstAttribute="leading" secondItem="Gd1-F4-CDq" secondAttribute="leading" id="05t-Bi-09X"/>
+                            <constraint firstItem="Lrk-qW-HH0" firstAttribute="trailing" secondItem="yRa-8i-pag" secondAttribute="trailing" id="Gyq-9Z-Bd3"/>
+                            <constraint firstItem="yRa-8i-pag" firstAttribute="top" secondItem="osZ-52-O7D" secondAttribute="bottom" constant="10" id="KDT-tp-XWQ"/>
+                            <constraint firstItem="osZ-52-O7D" firstAttribute="top" secondItem="Lrk-qW-HH0" secondAttribute="top" constant="10" id="QfI-tu-41z"/>
+                            <constraint firstItem="osZ-52-O7D" firstAttribute="leading" secondItem="Lrk-qW-HH0" secondAttribute="leading" constant="10" id="c2r-s9-2Pk"/>
+                            <constraint firstItem="Lrk-qW-HH0" firstAttribute="bottom" secondItem="yRa-8i-pag" secondAttribute="bottom" id="d0T-i4-ItE"/>
+                            <constraint firstItem="Lrk-qW-HH0" firstAttribute="trailing" secondItem="osZ-52-O7D" secondAttribute="trailing" constant="10" id="hKh-Ta-y0v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pdfViewer" destination="osZ-52-O7D" id="YeF-NU-i8I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEw-em-BTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="-5647"/>
+        </scene>
+        <!--Programmatically Pago View Controller-->
+        <scene sceneID="iwu-D9-zhz">
+            <objects>
+                <viewController id="7k5-GZ-hMu" customClass="ProgrammaticallyPagoViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yJ8-8i-Cvm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Iyn-xT-pNU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3oq-5f-1Mh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9QU-ak-7Nm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="-2291"/>
+        </scene>
+        <!--Programmatically Product View Controller-->
+        <scene sceneID="YCb-Lt-CWy">
+            <objects>
+                <viewController id="pCX-35-VWy" customClass="ProgrammaticallyProductViewController" customModule="DGarciaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G3K-LM-WuU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="I3s-eo-slH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kpg-v9-GYk"/>
+                    <connections>
+                        <segue destination="SET-0D-QWz" kind="show" identifier="buyTapped" id="kOJ-BU-eZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6i-VW-Yzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2710" y="-3033"/>
         </scene>
         <!--Usuario Controller-->
         <scene sceneID="qaW-kL-oQM">
@@ -1472,17 +1826,21 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6Lc-il-IPu"/>
+        <segue reference="7O5-oB-4g9"/>
+        <segue reference="irz-w3-rzv"/>
         <segue reference="sa0-FQ-ZBd"/>
-        <segue reference="YOK-y0-MRU"/>
-        <segue reference="3eu-Z9-Uly"/>
+        <segue reference="a1s-eS-VrW"/>
+        <segue reference="nYH-L8-Q2h"/>
         <segue reference="V20-PY-ggt"/>
         <segue reference="ah0-WG-zno"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="building.2" catalog="system" width="128" height="108"/>
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="dollarsign" catalog="system" width="89" height="128"/>
         <image name="fondoPrincipal" width="1080" height="2198"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

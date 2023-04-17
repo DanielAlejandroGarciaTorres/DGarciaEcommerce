@@ -60,6 +60,36 @@ class VentaProductoViewModel {
         return result
     }
     
+    func Update(idProducto : Int, cantidad: Int) -> Result {
+        
+        var result = Result()
+        
+        let existente = validarExistenciaProducto(idProducto: idProducto)
+        
+        if existente != -1 {
+//            print("El producto existe en la posicicon \(existente)")
+            do {
+                let context = appDelegate.persistentContainer.viewContext
+                let request = NSFetchRequest<NSFetchRequestResult>(entityName: "VentaProducto")
+                let productos = try context.fetch(request) as! [NSManagedObject]
+                
+                productos[existente].setValue(cantidad, forKey: "cantidad")
+                
+                try! context.save()
+                result.Correct = true
+                
+            } catch let error {
+                result.Correct = false
+                result.Ex = error
+                result.ErrorMessage = error.localizedDescription
+            }
+        } else {
+            result.Correct = false
+            result.ErrorMessage = "Prodcuto no encontrado"
+        }
+        return result
+    }
+    
     func validarExistenciaProducto(idProducto: Int) -> Int{
         var encontrado = -1
         
@@ -103,6 +133,30 @@ class VentaProductoViewModel {
         return result
     }
     
+    func DeleteAll() -> Result {
+        var result = Result()
+        
+        do {
+            let context = appDelegate.persistentContainer.viewContext
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "VentaProducto")
+            let productos = try context.fetch(request) as! [NSManagedObject]
+            
+            for producto in productos {
+                context.delete(producto)
+            }
+            
+            try context.save()
+            result.Correct = true
+            
+        } catch let error {
+            result.Correct = false
+            result.Ex = error
+            result.ErrorMessage = error.localizedDescription
+        }
+        
+        return result
+    }
+    
     
     func GetAll() -> Result{
         
@@ -133,6 +187,44 @@ class VentaProductoViewModel {
             result.Correct = false
             result.Ex = error
             result.ErrorMessage = error.localizedDescription
+        }
+        
+        return result
+    }
+    
+    func AddVentaRealizada(total : Double, metodoPago : Int) ->Result {
+        var result = Result()
+        
+        let context = DB.init()
+        let query = """
+                    INSERT INTO Venta
+                    (IdUsuario,
+                    Total,
+                    IdMetodoPago,
+                    Fecha)
+                    VALUES (?,?,?,?)
+                    """
+        var statement : OpaquePointer? = nil
+        
+        do {
+            if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK {
+                sqlite3_bind_int(statement, 1, 1)
+                sqlite3_bind_double(statement, 2, total)
+                sqlite3_bind_int(statement, 3, Int32(metodoPago))
+                sqlite3_bind_text(statement, 4, DateFormatter().string(from: Date()), -1, nil)
+
+                if sqlite3_step(statement) == SQLITE_DONE {
+                    result.Correct = true
+                } else {
+                    print(sqlite3_step(statement))
+                    result.Correct = false
+                    result.ErrorMessage = "Recurso no insertado."
+                }
+            }
+        } catch let error{
+            result.Correct = false
+            result.ErrorMessage = error.localizedDescription
+            result.Ex = error
         }
         
         return result

@@ -96,11 +96,6 @@ class ProductoCollectionViewController: UICollectionViewController {
     @objc func anadirButton(sender: UIButton) {
         let indexPath = IndexPath(row: sender.tag, section: 0)
         
-        print("""
-        Seleccionste ---> \(productos[indexPath.row].Nombre)
-        Con el id ------> \(productos[indexPath.row].IdProducto)
-        """)
-        
         if VentaProductoViewModel().Add(idProducto: productos[indexPath.row].IdProducto, cantidad: 1).Correct {
             let alert = UIAlertController(title: "Confirmación", message: "Producto añadido al carrito.", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default)

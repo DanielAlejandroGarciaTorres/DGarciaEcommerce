@@ -23,6 +23,7 @@ class CarritoComprasController: UIViewController {
         tableProductos.dataSource = self
         tableProductos.register(UINib(nibName: "CarritoComprasTableViewCell", bundle: nil), forCellReuseIdentifier: "CarritoComprasCell")
         LoadData()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -31,8 +32,9 @@ class CarritoComprasController: UIViewController {
         
         if result.Correct {
             productosVenta = result.Objects! as! [VentaProducto]
-            tableProductos.reloadData()
+            self.tableProductos.reloadData()
             DispatchQueue.main.async {
+                print("el total es: \(self.total)")
                 self.totalLabel.text = "$ \(String(self.total))"
             }
         }
@@ -80,8 +82,30 @@ extension CarritoComprasController : UITableViewDelegate, UITableViewDataSource 
             let imageData = Data(base64Encoded: productosVenta[indexPath.row].producto.Imagen!, options: .ignoreUnknownCharacters)
             cell.productImage.image = UIImage(data: imageData!)
         }
+        cell.StepperRow.value = Double(productosVenta[indexPath.row].cantidad)
+        
+        cell.StepperRow.tag = indexPath.row
+        cell.StepperRow.addTarget(self, action: #selector(StepperAction), for: .touchUpInside)
         
         return cell
+    }
+    
+    @objc func StepperAction(sender: UIStepper) {
+        let indexPath = IndexPath(row: sender.tag, section: 0)
+        print("sender ---> \(sender.value)")
+        if sender.value >= 1{
+            if VentaProductoViewModel().Update(idProducto: productosVenta[indexPath.row].producto.IdProducto, cantidad: Int(sender.value)).Correct {
+                total = 0.0
+                LoadData()
+                print("Actualzo")
+            } else {
+                print("No pude actualizar")
+            }
+        } else {
+            sender.value = 1
+            print("No hago nada")
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -94,6 +118,7 @@ extension CarritoComprasController : UITableViewDelegate, UITableViewDataSource 
             let detalleProductoController = segue.destination as! DetalleProductoController
             detalleProductoController.cantidad = productosVenta[posicionProducto].cantidad
             detalleProductoController.producto = productosVenta[posicionProducto].producto
+            
         } else if segue.identifier == "pagoSegue" {
             let pagoViewController = segue.destination as! PagoViewController
             pagoViewController.total = total

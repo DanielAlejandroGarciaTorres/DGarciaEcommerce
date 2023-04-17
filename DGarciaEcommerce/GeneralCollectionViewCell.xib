@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,6 +36,7 @@
                                 <color key="tintColor" systemColor="systemGray2Color"/>
                             </imageView>
                         </subviews>
+                        <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="160" id="1Gb-tj-PdF"/>
                             <constraint firstAttribute="trailing" secondItem="che-h8-gW3" secondAttribute="trailing" constant="10" id="6jw-FH-0I8"/>
@@ -59,11 +61,14 @@
                 <outlet property="imageOutlet" destination="2xe-AE-RVe" id="yoG-o7-X6k"/>
                 <outlet property="titleLabel" destination="che-h8-gW3" id="Prf-kr-B4T"/>
             </connections>
-            <point key="canvasLocation" x="132.06106870229007" y="58.802816901408455"/>
+            <point key="canvasLocation" x="131.29770992366412" y="58.450704225352112"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="98"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
